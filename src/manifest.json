@@ -1,0 +1,16 @@
+{
+	"manifest_version": 1,
+	"id": "io.github.sithphil.joplin-plugin-typora-like-editor",
+	"app_min_version": "3.5",
+	"version": "1.0.0",
+	"name": "joplin-plugin-typora-like-editor",
+	"description": "外部编辑器不导出笔记标题和增强导入和导出对yaml元数据的支持",
+	"author": "sithphil",
+	"homepage_url": "",
+	"repository_url": "https://github.com/sithphil/joplin-plugin-typora-like-editor.git",
+	"keywords": [],
+	"categories": [],
+	"screenshots": [],
+	"icons": {},
+	"promo_tile": {}
+}
