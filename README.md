@@ -1,5 +1,54 @@
-# Joplin Plugin
+# Joplin 插件 - 导出功能需求说明
 
-This is your new Joplin plugin. It is suggested that you use this README file to document your plugin.
+本文档详细说明 Joplin 插件的核心导出功能需求。关于插件的构建、调试及发布操作，可参考 GENERATOR_DOC.md。
 
-For information on how to build or publish the plugin, please see [GENERATOR_DOC.md](./GENERATOR_DOC.md)
+核心功能：Markdown 导出
+
+该插件支持将 Joplin 笔记导出为 Markdown 格式，针对内容处理、资源存储及前沿信息（frontmatter）处理制定以下专属规则。
+
+## 一、正文内容处理
+
+- 资源存储：与笔记关联的所有资源（如图片、附件等）需保存至 assets 目录，该目录创建于导出的 Markdown 文件同级目录下。Markdown 文件将通过相对路径引用这些资源（示例：./assets/resource-id.png）。
+
+- 标题排除：笔记标题不得作为导出 Markdown 文件的第一行内容，仅保留笔记正文（剔除标题部分）作为主内容区域。
+
+
+## 二、前沿信息（frontmatter）处理
+
+笔记元数据需导出至目标 Markdown 文件顶部，遵循 YAML 前沿信息规范，处理规则如下：
+
+- 必选元数据字段：导出的 YAML 前沿信息需包含4个核心字段：
+
+- title：同步自 Joplin 内部的元数据title
+
+- author：同步自 Joplin 内部的元数据auther
+
+- created：笔记创建时间（同步自 Joplin 内部 created_time 字段，格式为人类可读字符串或 ISO 8601 标准格式）
+
+- updated：笔记最后修改时间（同步自 Joplin 内部 updated_time 字段，格式与 created 一致）
+
+
+已有前沿信息处理：若原始笔记正文顶部已包含 YAML 前沿信息（以 --- 包裹），插件需执行以下操作：
+
+
+- 用 Joplin 同步的元数据，替换原有前沿信息中4个核心字段（title、author、created、updated）的值。
+
+- 保留原始 YAML 前沿信息中所有其他自定义字段，不做任何修改。
+
+无前沿信息处理：若笔记正文无 YAML 前沿信息，插件需在导出文件顶部自动生成新的 YAML 前沿信息，包含上述4个核心元数据字段。
+
+## 三、补充约束及规范
+
+- 资源兼容性：导出后，Markdown 文件中资源的相对路径需正确映射至 assets 目录，确保图片及附件可在本地 Markdown 编辑器（如 Typora、VS Code）中正常显示。
+
+- 前沿信息格式：YAML 前沿信息需遵循标准语法（冒号后加空格，字段名无非法字符），避免编辑器解析报错。
+
+- 批量导出支持：批量导出多个笔记时，需满足以下要求：
+
+- 每个笔记单独导出为一个独立的 Markdown 文件。
+
+- 所有导出笔记的资源统一存储至共享的 assets 目录（与所有导出 Markdown 文件同级），避免资源重复存储。
+
+- 每个笔记的前沿信息均按上述规则独立处理。
+
+
