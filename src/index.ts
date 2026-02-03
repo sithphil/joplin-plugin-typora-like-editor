@@ -11,54 +11,72 @@ let exportGlobalCache = {
 
 // 处理YAML前沿：生成/替换核心字段，保留自定义字段
 const processYamlFrontmatter = (noteBody, note) => {
-  // 定义YAML分隔符正则，匹配开头的YAML块
+  // 定义YAML分隔符正则，匹配开头的YAML块（兼容前后空白）
   const yamlRegex = /^---\s*[\s\S]*?\s*---\s*/;
-  // 核心元数据（均同步Joplin内部元数据）
+  // 核心元数据（同步Joplin内部元数据，固定补全顺序）
+  const coreKeys = ["title", "author", "created", "updated"]; // 固定核心字段顺序（补全时用）
   const coreMetadata = {
-    title: note.title || "未命名笔记", // title：同步Joplin内部笔记标题元数据
-    author: note.author || "未知作者", // author：同步Joplin内部笔记作者元数据（无则用默认值）
-    created: new Date(note.created_time).toISOString(), // 符合ISO 8601标准
+    title: note.title || "未命名笔记",
+    author: note.author || "未知作者",
+    created: new Date(note.created_time).toISOString(),
     updated: new Date(note.updated_time).toISOString(),
   };
 
-  // 情况1：原有YAML前沿，替换核心字段，保留自定义字段
+  // 情况1：原有YAML前沿，保留顺序+补全缺失核心字段+更新已有核心字段值
   if (yamlRegex.test(noteBody)) {
     const originalYaml = noteBody.match(yamlRegex)[0];
-    let newYaml = "---\n";
-    // 拆分原有YAML字段，逐行处理
-    const yamlLines = originalYaml.split("\n").filter(line => line.trim() !== "" && line.trim() !== "---");
-    // 存储原有自定义字段（排除4个核心字段）
-    const customFields = [];
+    // 拆分原有YAML行，过滤空行和分隔符，保留有效内容行
+    const yamlLines = originalYaml.split("\n").filter(line => {
+      const trimed = line.trim();
+      return trimed !== "" && trimed !== "---";
+    });
+    // 记录原有已存在的核心字段（用于后续检测缺失）
+    const existedCoreKeys = new Set();
+    let processedLines = [];
+
+    // 逐行处理原有YAML：保留顺序，更新核心字段值，保留自定义字段
     yamlLines.forEach(line => {
-      const [key] = line.split(":").map(item => item.trim());
-      if (!["title", "author", "created", "updated"].includes(key)) {
-        customFields.push(line.trim());
+      const [key, ...valueParts] = line.split(":").map(item => item.trim());
+      // 是核心字段：更新值，记录已存在
+      if (coreKeys.includes(key)) {
+        existedCoreKeys.add(key);
+        processedLines.push(`${key}: ${coreMetadata[key]}`);
+      } else {
+        // 非核心字段：直接保留原行（保持自定义字段格式）
+        processedLines.push(line.trim());
       }
     });
-    // 拼接新YAML：核心字段（同步Joplin元数据） + 自定义字段
-    Object.entries(coreMetadata).forEach(([key, value]) => {
-      newYaml += `${key}: ${value}\n`;
+
+    // 补全缺失的核心字段：按coreKeys顺序追加到自定义字段之前
+    coreKeys.forEach(key => {
+      if (!existedCoreKeys.has(key)) {
+        processedLines.push(`${key}: ${coreMetadata[key]}`);
+      }
     });
-    if (customFields.length > 0) {
-      newYaml += "\n" + customFields.join("\n") + "\n";
-    }
-    newYaml += "---\n";
+
+    // 拼接新YAML（保持格式规范，末尾换行）
+    const newYaml = [
+      "---",
+      ...processedLines,
+      "---\n"
+    ].join("\n");
+
     // 替换原有YAML，返回处理后的正文
     const processedBody = noteBody.replace(yamlRegex, newYaml);
-    console.log("原有YAML前沿处理完成，替换核心字段（同步Joplin元数据）");
+    console.log("原有YAML前沿处理完成：保留顺序，更新核心字段值，补全缺失核心字段");
     return processedBody;
   }
 
-  // 情况2：无原有YAML，生成新的YAML前沿（核心字段同步Joplin元数据）
-  const newYaml = `---
-title: ${coreMetadata.title}
-author: ${coreMetadata.author}
-created: ${coreMetadata.created}
-updated: ${coreMetadata.updated}
+  // 情况2：无原有YAML，生成标准YAML前沿（核心字段按固定顺序）
+  const newYaml = coreKeys
+    .map(key => `${key}: ${coreMetadata[key]}`)
+    .join("\n");
+
+  const processedBody = `---
+${newYaml}
 ---
 
-`;
-  const processedBody = newYaml + noteBody;
+${noteBody}`;
   console.log("无原有YAML，生成新前沿信息（同步Joplin元数据）");
   return processedBody;
 };
