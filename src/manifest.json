@@ -6,7 +6,7 @@
 	"name": "joplin-plugin-typora-like-editor",
 	"description": "外部编辑器不导出笔记标题和增强导入和导出对yaml元数据的支持",
 	"author": "sithphil",
-	"homepage_url": "",
+	"homepage_url": "https://github.com/sithphil/joplin-plugin-typora-like-editor/blob/master/README_EN.md",
 	"repository_url": "https://github.com/sithphil/joplin-plugin-typora-like-editor.git",
 	"keywords": [],
 	"categories": [],

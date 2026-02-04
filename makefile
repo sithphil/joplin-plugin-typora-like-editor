@@ -5,3 +5,6 @@ all:
 
 test-tools:
 	npx ts-node src/tools.ts
+
+release: all
+	bash ./release.sh

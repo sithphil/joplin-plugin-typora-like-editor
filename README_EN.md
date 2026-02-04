@@ -1,6 +1,6 @@
 # Joplin Typora-like Editor Plugin
 
-A Joplin plugin that provides Markdown export functionality preferred by Typora users, with comprehensive metadata handling and resource management.
+A Joplin plugin that provides Markdown export functionality preferred by Typora users, with comprehensive metadata handling and resource management. My typical usage scenario is to work with Typora, mainly for daily note-taking and document writing. Leveraging its clean interface and efficient editing features, it enhances text processing and typesetting efficiency. Joplin is responsible for note organization, backup, and synchronization.
 
 ## Pain Points
 
