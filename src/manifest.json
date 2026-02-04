@@ -8,9 +8,15 @@
 	"author": "sithphil",
 	"homepage_url": "https://github.com/sithphil/joplin-plugin-typora-like-editor/blob/master/README_EN.md",
 	"repository_url": "https://github.com/sithphil/joplin-plugin-typora-like-editor.git",
-	"keywords": [],
+	"keywords": [
+		"import",
+		"export",
+		"typora"
+	],
 	"categories": [],
 	"screenshots": [],
-	"icons": {},
+	"icons": {
+		"256": "img/icon_256.png"
+	},
 	"promo_tile": {}
 }
