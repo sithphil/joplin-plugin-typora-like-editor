@@ -52,6 +52,10 @@ export const SETTINGS_KEYS = {
    * 保存合并内容开关
    */
   SAVE_MERGED_CONTENT: "saveMergedContent",
+  /**
+   * 默认用户名
+   */
+  DEFAULT_AUTHOR: "defaultAuthor",
 } as const;
 
 /**
@@ -90,8 +94,8 @@ export async function registerSettings(): Promise<void> {
     // 注册设置部分
     await joplin.settings.registerSection(SETTINGS_SECTION, SETTINGS_SECTION_INFO);
 
-    // 使用 registerSettings 一次性注册所有设置项
-    await joplin.settings.registerSettings({
+    // 准备设置项配置
+    const settingsConfig: Record<string, any> = {
       [SETTINGS_KEYS.EXPORT_PATH_STYLE]: {
         type: SettingItemType.Int,
         value: ExportPathStyle.Flat,
@@ -115,14 +119,26 @@ export async function registerSettings(): Promise<void> {
         section: SETTINGS_SECTION,
         advanced: false,
       },
-    });
+      [SETTINGS_KEYS.DEFAULT_AUTHOR]: {
+        type: SettingItemType.String,
+        value: "Unknown Author",
+        label: "默认作者",
+        description: "导出笔记时使用的默认作者名称（当笔记没有设置作者时使用）",
+        public: true,
+        section: SETTINGS_SECTION,
+        advanced: false,
+      },
+    };
+
+    // 注册设置项
+    await joplin.settings.registerSettings(settingsConfig);
 
     logger.info("插件设置注册完成", {
-  exportPathStyleOptions: {
-    [ExportPathStyle.Flat]: exportPathStyleLabels[ExportPathStyle.Flat],
-    [ExportPathStyle.Hierarchical]: exportPathStyleLabels[ExportPathStyle.Hierarchical],
-  }
-});
+      exportPathStyleOptions: {
+        [ExportPathStyle.Flat]: exportPathStyleLabels[ExportPathStyle.Flat],
+        [ExportPathStyle.Hierarchical]: exportPathStyleLabels[ExportPathStyle.Hierarchical],
+      },
+    });
   } catch (error) {
     logger.logError(error, "注册插件设置失败");
     throw error;
@@ -170,6 +186,25 @@ export async function setSaveMergedContent(enabled: boolean): Promise<void> {
 }
 
 /**
+ * 获取默认作者设置值
+ *
+ * @returns 当前设置的默认作者名称
+ */
+export async function getDefaultAuthor(): Promise<string> {
+  const value = await joplin.settings.value(SETTINGS_KEYS.DEFAULT_AUTHOR);
+  return value as string || "Unknown Author";
+}
+
+/**
+ * 设置默认作者
+ *
+ * @param author 要设置的默认作者名称
+ */
+export async function setDefaultAuthor(author: string): Promise<void> {
+  await joplin.settings.setValue(SETTINGS_KEYS.DEFAULT_AUTHOR, author);
+}
+
+/**
  * 获取所有插件设置值
  *
  * @returns 包含所有设置值的对象
@@ -194,6 +229,9 @@ export function validateSettingValue(key: string, value: unknown): boolean {
   if (key === SETTINGS_KEYS.SAVE_MERGED_CONTENT) {
     return typeof value === "boolean";
   }
+  if (key === SETTINGS_KEYS.DEFAULT_AUTHOR) {
+    return typeof value === "string";
+  }
   return false;
 }
 
@@ -209,6 +247,9 @@ export function getSettingDefaultValue(key: string): unknown {
   }
   if (key === SETTINGS_KEYS.SAVE_MERGED_CONTENT) {
     return false;
+  }
+  if (key === SETTINGS_KEYS.DEFAULT_AUTHOR) {
+    return "Unknown Author";
   }
   return null;
 }
