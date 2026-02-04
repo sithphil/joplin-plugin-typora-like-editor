@@ -1,0 +1,1250 @@
+[2026-02-04T06:10:01.656Z] [INFO] [joplin-plugin-typora-like-editor] 日志系统初始化完成
+[2026-02-04T06:10:01.657Z] [INFO] [joplin-plugin-typora-like-editor] 日志文件路径: C:\Users\xxx\.config\joplin-desktop\plugin-data\io.github.sithphil.joplin-plugin-typora-like-editor\logs\joplin-plugin-typora-like-editor.log
+[2026-02-04T06:10:01.657Z] [INFO] [joplin-plugin-typora-like-editor] Typora-like Editor Plugin started!
+[2026-02-04T06:10:01.657Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] registerSettings 开始
+[2026-02-04T06:10:01.720Z] [INFO] [joplin-plugin-typora-like-editor] 插件设置注册完成 {
+  "exportPathStyleOptions": {
+    "0": "扁平结构",
+    "1": "层次结构"
+  }
+}
+[2026-02-04T06:10:01.720Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] registerSettings 结束
+[2026-02-04T06:10:01.720Z] [INFO] [joplin-plugin-typora-like-editor] 插件设置已注册
+[2026-02-04T06:10:22.664Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onInit 开始 {
+  "destPath": "C:\\Users\\xxx\\Downloads\\04_02_2026.md"
+}
+[2026-02-04T06:10:22.668Z] [INFO] [joplin-plugin-typora-like-editor] 当前导出路径样式 {
+  "rawValue": 1,
+  "convertedValue": 1,
+  "styleName": "层次结构"
+}
+[2026-02-04T06:10:22.669Z] [INFO] [joplin-plugin-typora-like-editor] 当前保存合并内容开关 {
+  "enabled": false
+}
+[2026-02-04T06:10:22.669Z] [INFO] [joplin-plugin-typora-like-editor] 层次结构模式：开始预加载所有文件夹信息
+[2026-02-04T06:10:22.672Z] [INFO] [joplin-plugin-typora-like-editor] 文件夹预加载完成，共加载 26 个文件夹
+[2026-02-04T06:10:22.672Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onInit 结束
+[2026-02-04T06:10:22.672Z] [INFO] [joplin-plugin-typora-like-editor] 导出初始化完成，全局缓存已清空
+[2026-02-04T06:10:22.674Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 2,
+  "itemId": "ec8031c8fd314213b391d006589cd073",
+  "style": 1
+}
+[2026-02-04T06:10:22.674Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:10:22.676Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 开始 {
+  "resourceId": "76d6eb45a39347699ca8534042185a96",
+  "filePath": "C:/Users/xxx/.config/joplin-desktop/resources/76d6eb45a39347699ca8534042185a96.png",
+  "style": 1
+}
+[2026-02-04T06:10:22.676Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理资源完整属性 {
+  "id": "76d6eb45a39347699ca8534042185a96"
+}
+[2026-02-04T06:10:22.677Z] [DEBUG] [joplin-plugin-typora-like-editor] 使用层次结构模式处理资源
+[2026-02-04T06:10:22.679Z] [INFO] [joplin-plugin-typora-like-editor] resourceNotes:  {
+  "items": [
+    {
+      "id": "15c88f27e2e549e6a51e2747d3b15903",
+      "parent_id": "ec8031c8fd314213b391d006589cd073",
+      "title": "ESXi-r740",
+      "deleted_time": 0
+    }
+  ],
+  "has_more": false
+}
+[2026-02-04T06:10:22.679Z] [DEBUG] [joplin-plugin-typora-like-editor] 层次结构资源路径计算 {
+  "noteId": "15c88f27e2e549e6a51e2747d3b15903",
+  "folderId": "ec8031c8fd314213b391d006589cd073",
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets",
+  "resFileName": "esxi-gpumanager.png",
+  "resDestPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\esxi-gpumanager.png",
+  "resRelativePath": "./assets/esxi-gpumanager.png"
+}
+[2026-02-04T06:10:22.680Z] [INFO] [joplin-plugin-typora-like-editor] 创建文件夹和assets目录 {
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets"
+}
+[2026-02-04T06:10:22.681Z] [INFO] [joplin-plugin-typora-like-editor] 资源复制完成 {
+  "from": "C:/Users/xxx/.config/joplin-desktop/resources/76d6eb45a39347699ca8534042185a96.png",
+  "to": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\esxi-gpumanager.png"
+}
+[2026-02-04T06:10:22.681Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源映射已记录 {
+  "resourceKey": "15c88f27e2e549e6a51e2747d3b15903_76d6eb45a39347699ca8534042185a96",
+  "relativePath": "./assets/esxi-gpumanager.png"
+}
+[2026-02-04T06:10:22.681Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 结束
+[2026-02-04T06:10:22.683Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 4,
+  "itemId": "76d6eb45a39347699ca8534042185a96",
+  "style": 1
+}
+[2026-02-04T06:10:22.683Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:10:22.685Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 开始 {
+  "resourceId": "7fe70bf5565940fc935782a7c90f79f8",
+  "filePath": "C:/Users/xxx/.config/joplin-desktop/resources/7fe70bf5565940fc935782a7c90f79f8.png",
+  "style": 1
+}
+[2026-02-04T06:10:22.685Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理资源完整属性 {
+  "id": "7fe70bf5565940fc935782a7c90f79f8"
+}
+[2026-02-04T06:10:22.686Z] [DEBUG] [joplin-plugin-typora-like-editor] 使用层次结构模式处理资源
+[2026-02-04T06:10:22.687Z] [INFO] [joplin-plugin-typora-like-editor] resourceNotes:  {
+  "items": [
+    {
+      "id": "15c88f27e2e549e6a51e2747d3b15903",
+      "parent_id": "ec8031c8fd314213b391d006589cd073",
+      "title": "ESXi-r740",
+      "deleted_time": 0
+    }
+  ],
+  "has_more": false
+}
+[2026-02-04T06:10:22.687Z] [DEBUG] [joplin-plugin-typora-like-editor] 层次结构资源路径计算 {
+  "noteId": "15c88f27e2e549e6a51e2747d3b15903",
+  "folderId": "ec8031c8fd314213b391d006589cd073",
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets",
+  "resFileName": "ESXi主机与虚拟机互联.png",
+  "resDestPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\ESXi主机与虚拟机互联.png",
+  "resRelativePath": "./assets/ESXi主机与虚拟机互联.png"
+}
+[2026-02-04T06:10:22.688Z] [INFO] [joplin-plugin-typora-like-editor] 创建文件夹和assets目录 {
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets"
+}
+[2026-02-04T06:10:22.689Z] [INFO] [joplin-plugin-typora-like-editor] 资源复制完成 {
+  "from": "C:/Users/xxx/.config/joplin-desktop/resources/7fe70bf5565940fc935782a7c90f79f8.png",
+  "to": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\ESXi主机与虚拟机互联.png"
+}
+[2026-02-04T06:10:22.689Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源映射已记录 {
+  "resourceKey": "15c88f27e2e549e6a51e2747d3b15903_7fe70bf5565940fc935782a7c90f79f8",
+  "relativePath": "./assets/ESXi主机与虚拟机互联.png"
+}
+[2026-02-04T06:10:22.689Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 结束
+[2026-02-04T06:10:22.690Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 4,
+  "itemId": "7fe70bf5565940fc935782a7c90f79f8",
+  "style": 1
+}
+[2026-02-04T06:10:22.690Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:10:22.690Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 开始 {
+  "resourceId": "b4e81fc96a994d0e991104bc35682185",
+  "filePath": "C:/Users/xxx/.config/joplin-desktop/resources/b4e81fc96a994d0e991104bc35682185.png",
+  "style": 1
+}
+[2026-02-04T06:10:22.690Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理资源完整属性 {
+  "id": "b4e81fc96a994d0e991104bc35682185"
+}
+[2026-02-04T06:10:22.691Z] [DEBUG] [joplin-plugin-typora-like-editor] 使用层次结构模式处理资源
+[2026-02-04T06:10:22.692Z] [INFO] [joplin-plugin-typora-like-editor] resourceNotes:  {
+  "items": [
+    {
+      "id": "15c88f27e2e549e6a51e2747d3b15903",
+      "parent_id": "ec8031c8fd314213b391d006589cd073",
+      "title": "ESXi-r740",
+      "deleted_time": 0
+    }
+  ],
+  "has_more": false
+}
+[2026-02-04T06:10:22.692Z] [DEBUG] [joplin-plugin-typora-like-editor] 层次结构资源路径计算 {
+  "noteId": "15c88f27e2e549e6a51e2747d3b15903",
+  "folderId": "ec8031c8fd314213b391d006589cd073",
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets",
+  "resFileName": "esxi图形化管理-GPU直通.png",
+  "resDestPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\esxi图形化管理-GPU直通.png",
+  "resRelativePath": "./assets/esxi图形化管理-GPU直通.png"
+}
+[2026-02-04T06:10:22.692Z] [INFO] [joplin-plugin-typora-like-editor] 创建文件夹和assets目录 {
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets"
+}
+[2026-02-04T06:10:22.693Z] [INFO] [joplin-plugin-typora-like-editor] 资源复制完成 {
+  "from": "C:/Users/xxx/.config/joplin-desktop/resources/b4e81fc96a994d0e991104bc35682185.png",
+  "to": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\esxi图形化管理-GPU直通.png"
+}
+[2026-02-04T06:10:22.693Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源映射已记录 {
+  "resourceKey": "15c88f27e2e549e6a51e2747d3b15903_b4e81fc96a994d0e991104bc35682185",
+  "relativePath": "./assets/esxi图形化管理-GPU直通.png"
+}
+[2026-02-04T06:10:22.693Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 结束
+[2026-02-04T06:10:22.694Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 4,
+  "itemId": "b4e81fc96a994d0e991104bc35682185",
+  "style": 1
+}
+[2026-02-04T06:10:22.694Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:10:22.695Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 开始 {
+  "resourceId": "ba1e1695704a44f9bed7344f38331442",
+  "filePath": "C:/Users/xxx/.config/joplin-desktop/resources/ba1e1695704a44f9bed7344f38331442.png",
+  "style": 1
+}
+[2026-02-04T06:10:22.695Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理资源完整属性 {
+  "id": "ba1e1695704a44f9bed7344f38331442"
+}
+[2026-02-04T06:10:22.696Z] [DEBUG] [joplin-plugin-typora-like-editor] 使用层次结构模式处理资源
+[2026-02-04T06:10:22.697Z] [INFO] [joplin-plugin-typora-like-editor] resourceNotes:  {
+  "items": [
+    {
+      "id": "15c88f27e2e549e6a51e2747d3b15903",
+      "parent_id": "ec8031c8fd314213b391d006589cd073",
+      "title": "ESXi-r740",
+      "deleted_time": 0
+    }
+  ],
+  "has_more": false
+}
+[2026-02-04T06:10:22.697Z] [DEBUG] [joplin-plugin-typora-like-editor] 层次结构资源路径计算 {
+  "noteId": "15c88f27e2e549e6a51e2747d3b15903",
+  "folderId": "ec8031c8fd314213b391d006589cd073",
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets",
+  "resFileName": "esxi图形化管理1.png",
+  "resDestPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\esxi图形化管理1.png",
+  "resRelativePath": "./assets/esxi图形化管理1.png"
+}
+[2026-02-04T06:10:22.697Z] [INFO] [joplin-plugin-typora-like-editor] 创建文件夹和assets目录 {
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets"
+}
+[2026-02-04T06:10:22.698Z] [INFO] [joplin-plugin-typora-like-editor] 资源复制完成 {
+  "from": "C:/Users/xxx/.config/joplin-desktop/resources/ba1e1695704a44f9bed7344f38331442.png",
+  "to": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\esxi图形化管理1.png"
+}
+[2026-02-04T06:10:22.698Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源映射已记录 {
+  "resourceKey": "15c88f27e2e549e6a51e2747d3b15903_ba1e1695704a44f9bed7344f38331442",
+  "relativePath": "./assets/esxi图形化管理1.png"
+}
+[2026-02-04T06:10:22.699Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 结束
+[2026-02-04T06:10:22.699Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 4,
+  "itemId": "ba1e1695704a44f9bed7344f38331442",
+  "style": 1
+}
+[2026-02-04T06:10:22.699Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:10:22.700Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 开始 {
+  "resourceId": "0dccf72b8fbc4c1581a91b0e289ac49e",
+  "filePath": "C:/Users/xxx/.config/joplin-desktop/resources/0dccf72b8fbc4c1581a91b0e289ac49e.png",
+  "style": 1
+}
+[2026-02-04T06:10:22.700Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理资源完整属性 {
+  "id": "0dccf72b8fbc4c1581a91b0e289ac49e"
+}
+[2026-02-04T06:10:22.701Z] [DEBUG] [joplin-plugin-typora-like-editor] 使用层次结构模式处理资源
+[2026-02-04T06:10:22.702Z] [INFO] [joplin-plugin-typora-like-editor] resourceNotes:  {
+  "items": [
+    {
+      "id": "f12633ab738b4e83b6dd05dd0a7c230c",
+      "parent_id": "ec8031c8fd314213b391d006589cd073",
+      "title": "ESXi-支持日志",
+      "deleted_time": 0
+    }
+  ],
+  "has_more": false
+}
+[2026-02-04T06:10:22.702Z] [DEBUG] [joplin-plugin-typora-like-editor] 层次结构资源路径计算 {
+  "noteId": "f12633ab738b4e83b6dd05dd0a7c230c",
+  "folderId": "ec8031c8fd314213b391d006589cd073",
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets",
+  "resFileName": "ESXi主机与虚拟机互联.png",
+  "resDestPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\ESXi主机与虚拟机互联.png",
+  "resRelativePath": "./assets/ESXi主机与虚拟机互联.png"
+}
+[2026-02-04T06:10:22.702Z] [INFO] [joplin-plugin-typora-like-editor] 创建文件夹和assets目录 {
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets"
+}
+[2026-02-04T06:10:22.703Z] [INFO] [joplin-plugin-typora-like-editor] 资源复制完成 {
+  "from": "C:/Users/xxx/.config/joplin-desktop/resources/0dccf72b8fbc4c1581a91b0e289ac49e.png",
+  "to": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\ESXi主机与虚拟机互联.png"
+}
+[2026-02-04T06:10:22.703Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源映射已记录 {
+  "resourceKey": "f12633ab738b4e83b6dd05dd0a7c230c_0dccf72b8fbc4c1581a91b0e289ac49e",
+  "relativePath": "./assets/ESXi主机与虚拟机互联.png"
+}
+[2026-02-04T06:10:22.703Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 结束
+[2026-02-04T06:10:22.703Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 4,
+  "itemId": "0dccf72b8fbc4c1581a91b0e289ac49e",
+  "style": 1
+}
+[2026-02-04T06:10:22.704Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:10:22.704Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 1,
+  "itemId": "15c88f27e2e549e6a51e2747d3b15903",
+  "style": 1
+}
+[2026-02-04T06:10:22.704Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理笔记基础信息 {
+  "id": "15c88f27e2e549e6a51e2747d3b15903",
+  "title": "ESXi-r740"
+}
+[2026-02-04T06:10:22.705Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理笔记完整属性 {
+  "id": "15c88f27e2e549e6a51e2747d3b15903",
+  "title": "ESXi-r740",
+  "body": "![esxi图形化管理1](:/ba1e1695704a44f9bed7344f38331442)\n\n![esxi-gpumanager](:/76d6eb45a39347699ca8534042185a96)\n\n![ESXi主机与虚拟机互联](:/7fe70bf5565940fc935782a7c90f79f8)\n\n![esxi图形化管理-GPU直通](:/b4e81fc96a994d0e991104bc35682185)\n\n\n\n",
+  "created_time": 1761190403797,
+  "updated_time": 1761190828375,
+  "author": "",
+  "parent_id": "ec8031c8fd314213b391d006589cd073",
+  "type_": 1
+}
+[2026-02-04T06:10:22.705Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] processYamlFrontmatter 开始 {
+  "noteId": "15c88f27e2e549e6a51e2747d3b15903",
+  "noteTitle": "ESXi-r740"
+}
+[2026-02-04T06:10:22.705Z] [DEBUG] [joplin-plugin-typora-like-editor] 记录笔记文件夹关联 {
+  "noteId": "15c88f27e2e549e6a51e2747d3b15903",
+  "folderId": "ec8031c8fd314213b391d006589cd073"
+}
+[2026-02-04T06:10:22.706Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] processYamlFrontmatter 结束
+[2026-02-04T06:10:22.705Z] [INFO] [joplin-plugin-typora-like-editor] 无原有YAML，生成新前沿信息（同步Joplin元数据）
+[2026-02-04T06:10:22.706Z] [INFO] [joplin-plugin-typora-like-editor] 笔记【ESXi-r740】处理完成，已加入全局缓存 {
+  "noteId": "15c88f27e2e549e6a51e2747d3b15903",
+  "fileName": "ESXi-r740.md"
+}
+[2026-02-04T06:10:22.706Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:10:22.706Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 1,
+  "itemId": "a465bad8328a4295a29dd514f7173c22",
+  "style": 1
+}
+[2026-02-04T06:10:22.706Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理笔记基础信息 {
+  "id": "a465bad8328a4295a29dd514f7173c22",
+  "title": "ESXi-vSwitch的作用"
+}
+[2026-02-04T06:10:22.707Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理笔记完整属性 {
+  "id": "a465bad8328a4295a29dd514f7173c22",
+  "title": "ESXi-vSwitch的作用",
+  "body": "虚拟交换机（vSwitch）是 ESXi 网络架构的核心组件，其作用类似于物理交换机，但专为虚拟化环境设计。以下是它的核心功能和实际价值：\n\n### 一、核心作用\n\n连通虚拟与物理网络\n物理层接入：绑定物理网卡（vmnicX），将 ESXi主机连接到外部网络（如路由器、存储网络）。\n虚拟层分发：为虚拟机、管理接口（vmkX）提供网络端口，实现内外网通信。\n隔离与组织网络流量：通过端口组（Port Group）划分逻辑网络（如管理、业务、存储），不同流量互不干扰。\n示例：\nManagement 端口组 → 传输 ESXi 管理流量（SSH/Web）\nVM Network 端口组 → 承载虚拟机业务流量\nvMotion 端口组 → 专用虚拟机迁移通道\n实施网络策略\n安全策略：MAC 地址过滤、拒绝混杂模式（防止嗅探攻击）。\n流量策略：\n\n- 负载均衡：在多块物理网卡间分配流量（如 基于IP哈希）。\n\n- 故障切换：自动切换至备用网卡（物理网卡故障时）。\n\n- 带宽控制：限制端口组流量速率（如保障关键业务带宽）。\n\n## 二、实际应用场景\n\n  场景 1：虚拟机网络互通\n  问题：多台虚拟机需互相通信（如 Web 服务器访问数据库）。\n  方案：虚拟机网卡接入同一 vSwitch 的端口组 →数据直接在主机内存交换（无需经过物理网络），延迟低于 1ms。\n  场景 2：高可用网络架构\n  问题：物理网卡故障导致业务中断。\n  方案：vSwitch 绑定多块物理网卡（如 vmnic0 + vmnic1）→ 启用 故障切换策略→ 单网卡故障时业务无感知。\n  场景 3：网络性能优化\n  需求：虚拟机需万兆带宽访问 NAS 存储。\n  方案：创建专用 vSwitch → 绑定万兆物理网卡 → 虚拟机通过此 vSwitch直连存储网络。\n\n##   四、工作流程示例\n\n  \n\n```mermaid\ngraph LR\n  A[虚拟机 VM1] -->|发送数据包| B(端口组 PG1)\n  B --> C[vSwitch]\n  C -->|同主机通信| D[虚拟机 VM2]\n  C -->|访问外网| E[物理网卡 vmnic0] --> F[外部网络]\n```\n\n ",
+  "created_time": 1753161617883,
+  "updated_time": 1761191716777,
+  "author": "",
+  "parent_id": "ec8031c8fd314213b391d006589cd073",
+  "type_": 1
+}
+[2026-02-04T06:10:22.707Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] processYamlFrontmatter 开始 {
+  "noteId": "a465bad8328a4295a29dd514f7173c22",
+  "noteTitle": "ESXi-vSwitch的作用"
+}
+[2026-02-04T06:10:22.707Z] [DEBUG] [joplin-plugin-typora-like-editor] 记录笔记文件夹关联 {
+  "noteId": "a465bad8328a4295a29dd514f7173c22",
+  "folderId": "ec8031c8fd314213b391d006589cd073"
+}
+[2026-02-04T06:10:22.707Z] [INFO] [joplin-plugin-typora-like-editor] 无原有YAML，生成新前沿信息（同步Joplin元数据）
+[2026-02-04T06:10:22.708Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] processYamlFrontmatter 结束
+[2026-02-04T06:10:22.708Z] [INFO] [joplin-plugin-typora-like-editor] 笔记【ESXi-vSwitch的作用】处理完成，已加入全局缓存 {
+  "noteId": "a465bad8328a4295a29dd514f7173c22",
+  "fileName": "ESXi-vSwitch的作用.md"
+}
+[2026-02-04T06:10:22.708Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:10:22.708Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 1,
+  "itemId": "24c8caba01544d8f9a7ec620f6dc9d27",
+  "style": 1
+}
+[2026-02-04T06:10:22.708Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理笔记基础信息 {
+  "id": "24c8caba01544d8f9a7ec620f6dc9d27",
+  "title": "ESXi-技术外援"
+}
+[2026-02-04T06:10:22.709Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理笔记完整属性 {
+  "id": "24c8caba01544d8f9a7ec620f6dc9d27",
+  "title": "ESXi-技术外援",
+  "body": "# 技术支持\r\n\r\n[TOC]\r\n\r\n## 单台主机\r\n\r\n网络拓扑：\r\n\r\n```mermaid\r\ngraph TD;\r\n    A(外网)-->B(外网-网页认证);\r\n\tB-->C(外网网口)\r\n    AA(内网)-->BB(内网-网页认证);\r\n\tBB-->CC(内网网口)\r\n\tPC(ESXi主机)\r\n\tC-->PC\r\n\tCC-->PC\r\n\tVM1(虚拟机1)\r\n    VM2(虚拟机2)\r\n    VMx(虚拟机...)\r\n    PC-->VM1\r\n    PC-->VM2\r\n    PC-->VMx\r\n```\r\n\r\n我希望：\r\n\r\n- 如何外网SSH和网页访问ESXi操作系统。\r\n- 同时，内网也可以访问ESXi。\r\n- 同时，外网和网页ssh到ESXi的虚拟机。\r\n\r\n怎么做：\r\n\r\n- 我的困惑点：ESXi可以进行网页认证吗，需要安装浏览器吗？\r\n\r\n- 虚拟机与ESXi主机使用NAT，还是桥接，还是什么网络方案？\r\n\r\n- 如果考虑加入路由器来连接多台ESXi主机，ESXi能通过网页认证吗？\r\n\r\n## 多台主机\r\n\r\n```mermaid\r\ngraph TD\r\n\tNP{Network port}\r\n\trouter(Router)\t\r\n\tHost1(Host Machine 1)\r\n\tVm1_h1(Virtual Machine 1)\r\n\tVm2_h1(Virtual Machine 2)\r\n\tVmn_h1(Virtual Machine n)\r\n\tHost2(Host Machine 2)\r\n\tVm1_h2(Virtual Machine 1)\r\n\tVm2_h2(Virtual Machine 2)\r\n\tVmn_h2(Virtual Machine n)\r\n\tHost3(Host Machine 3)\r\n\tVm1_h3(Virtual Machine 1)\r\n\tVm2_h3(Virtual Machine 2)\r\n\tVmn_h3(Virtual Machine n)\r\n\t\r\n\tInternet((Internet))-->NP(RJ45)\r\n\tNP--Authentication-->router-->Host1\r\n\trouter-->Host2\r\n\trouter-->Host3\r\n\t\r\n\tHost1-->Vm1_h1\r\n\tHost1-->Vm2_h1\r\n\tHost1-->Vmn_h1\r\n\t\r\n\tHost2-->Vm1_h2\r\n\tHost2-->Vm2_h2\r\n\tHost2-->Vmn_h2\r\n\t\r\n\tHost3-->Vm1_h3\r\n\tHost3-->Vm2_h3\r\n\tHost3-->Vmn_h3\r\n```\r\n\r\n### 技术要点\r\n\r\n- 理由器能完成认证。\r\n\r\n- 物理主机能安装DDNS客户端或者等效功能。\r\n\r\n## 工况检测\r\n\r\n吴老师，初步整理了一下列表，澄清一下现网信息：\r\n| 问题Q                                                        | 答案A                          |\r\n| ------------------------------------------------------------ | ------------------------------ |\r\n| 1.网络拓扑图结构是怎么样的?                                  |                                |\r\n| 2.本机的网口是双网口么，一个连外网，一个连内网？             |                                |\r\n| 2.1 是否已经连上了院内网络的主交换机或者路由器？             |                                |\r\n| 2.2 是否已经连上了院内的防火墙？网口现在连接状态是否OK的？   |                                |\r\n| 3. 目前的问题主要就是，无法自动开机连接网络么？是无法连接内网，还是无法连接外网？ |                                |\r\n| 管理网络参数是咋样的：                                       |                                |\r\n| 4.1 IP地址、子网掩码、默认网关                               |                                |\r\n| 4.2 是否存在Vlan划分                                         |                                |\r\n| 4.3 DNS服务器地址是咋样的                                    |                                |\r\n| 5. 是否有本机的超级权限？                                    | 有root权限                     |\r\n| 6. 目前网络登录认证是采用的AD/LDAP的么？是否已经有了AD/LDAP 认证的系统的账号和密码？认证服务的服务器地址是咋样的？ | ESXi 8.0.3U3无curl命令行工具。 |\r\n| 7. 现在咱们应该是安装的Ubuntu系统吧，如果现在没有登陆上网络，但是又需要完成AD/LDAP的话，有安装过相应的网络工具么，如：sssd、realmd 及其依赖包 |                                |\r\n\r\n",
+  "created_time": 1750828676486,
+  "updated_time": 1751696295640,
+  "author": "",
+  "parent_id": "ec8031c8fd314213b391d006589cd073",
+  "type_": 1
+}
+[2026-02-04T06:10:22.710Z] [DEBUG] [joplin-plugin-typora-like-editor] 记录笔记文件夹关联 {
+  "noteId": "24c8caba01544d8f9a7ec620f6dc9d27",
+  "folderId": "ec8031c8fd314213b391d006589cd073"
+}
+[2026-02-04T06:10:22.710Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] processYamlFrontmatter 开始 {
+  "noteId": "24c8caba01544d8f9a7ec620f6dc9d27",
+  "noteTitle": "ESXi-技术外援"
+}
+[2026-02-04T06:10:22.710Z] [INFO] [joplin-plugin-typora-like-editor] 无原有YAML，生成新前沿信息（同步Joplin元数据）
+[2026-02-04T06:10:22.710Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] processYamlFrontmatter 结束
+[2026-02-04T06:10:22.710Z] [INFO] [joplin-plugin-typora-like-editor] 笔记【ESXi-技术外援】处理完成，已加入全局缓存 {
+  "noteId": "24c8caba01544d8f9a7ec620f6dc9d27",
+  "fileName": "ESXi-技术外援.md"
+}
+[2026-02-04T06:10:22.710Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:10:22.710Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 1,
+  "itemId": "f12633ab738b4e83b6dd05dd0a7c230c",
+  "style": 1
+}
+[2026-02-04T06:10:22.710Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理笔记基础信息 {
+  "id": "f12633ab738b4e83b6dd05dd0a7c230c",
+  "title": "ESXi-支持日志"
+}
+[2026-02-04T06:10:22.711Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理笔记完整属性 {
+  "id": "f12633ab738b4e83b6dd05dd0a7c230c",
+  "title": "ESXi-支持日志",
+  "body": "# ESXi基本知识\n\n## 基本概念\n\n物理网卡：vmnicX 是 ESXi 识别的物理网卡（如主板网口、PCIe 网卡）。\n\n虚拟交换机：需要分配物理网卡（上行链路），才能上网。需要添加端口组，用于隔离不同流量。\n\nQ: ESXi中两个虚拟机分别连接同一个虚拟交换机的不同端口组，能实现互相ping通吗？\n\nA: 在VMware ESXi环境中，**两个虚拟机连接到同一个虚拟交换机（vSwitch）的不同端口组（Port Group）时，默认情况下可以互相ping通**，但实际连通性取决于端口组的网络策略配置。\n\n| **场景**             | 能否ping通 | 条件说明                   |\n| :------------------- | :--------- | :------------------------- |\n| 同vSwitch + 同VLAN   | ✅ 是       | 默认策略下直接互通         |\n| 同vSwitch + 不同VLAN | ❌ 否       | 需三层路由                 |\n| 安全策略阻断         | ❌ 否       | 检查MAC/伪传输设置         |\n| 防火墙拦截           | ❌ 否       | 关闭ESXi或虚拟机防火墙测试 |\n\n\n\n## 虚拟机连外网-何钢\n\n1. 启用双网口\n2. 创建新交换机\n    esxcli network vswitch standard add -v vSwitch1\n\n3. 将 vmnic3 分配给新交换机\n    esxcli network vswitch standard uplink add -u vmnic3 -v vSwitch1\n\n4. 创建业务网络端口组\n    esxcli network vswitch standard portgroup add -p \"BusinessNetwork\" -v vSwitch1\n\n5. 双网口非管理网口手动设置IP\n   ```esxi-shell\n   esxcli network ip interface ipv4 set \\\n    -i vmk1 \\\n    -t static \\\n    -I 172.28.30.219 \\\n    -N 255.255.254.0 \\\n    -g 172.28.30.1 \n   ```\n\n6. 在Web网页设置业务网口所在的端口组赋值给虚拟机\n   直接创建端口组，选中vSwitch1. 以前在：esxcli network vswitch standard add -v vSwitch1 这里面创建的.\n7. 虚拟机新建网络，选中刚创建的端口组BusinessNetwork\n8. 启动虚拟机\n\n成功案例如下图。\n\n![ESXi主机与虚拟机互联](:/0dccf72b8fbc4c1581a91b0e289ac49e)\n\n| **类型**      | **作用**                      | **绑定对象**       |\n| :------------ | :---------------------------- | :----------------- |\n| 上行链路端口  | 连接物理网络                  | 物理网卡（vmnic）  |\n| 虚拟机端口组  | 为虚拟机提供网络连接          | 虚拟机网卡（vNIC） |\n| VMKernel 端口 | 处理管理流量、vMotion、存储等 | ESXi 系统服务      |\n\n```mermaid\ngraph LR\n    A[虚拟机 VM1] -->|网络适配器| B(端口组 VM Network)\n    B --> C[虚拟交换机 vSwitch1]\n    C --> D[物理网卡 vmnic1] --> E[物理网络]\n    C --> F[主机管理接口 vmk0] --> G[ESXi 管理流量]\n```\n\n| cmd                                            | 目的                                                         |\n| ---------------------------------------------- | ------------------------------------------------------------ |\n| esxcli network vswitch standard portgroup list |                                                              |\n| esxcli network ip interface ipv4 address list  | 查看所有网络接口的 IPv4 配置                                 |\n| esxcli network nic list                        | 多网卡场景：先确认物理网卡名（如 vmnic0），再关联到对应的 vmkX 接口。 |\n| esxcli network ip interface list               | 用于列出 ESXi 系统上所有网络接口的 IP 配置信息               |\n| esxcfg-vswitch -l                              | 检查端口组与网卡映射                                         |\n| esxcli network nic get -n vmnic0               | 检查物理网卡是否启用（Link Status: Up）                      |\n| esxcli network vswitch standard list           | 查看虚拟交换机绑定关系                                       |\n| esxcli network vm list -v <虚拟机ID>           | 查看虚拟机网络绑定                                           |\n| vmkping -I vSwitch0_IP 目标IP                  | 测试特定 vSwitch 连通性                                      |\n\nesxcli network nic list\n\n> Name    PCI Device    Driver   Admin Status  Link Status  Speed  Duplex  MAC Address         MTU  Description\n> ------  ------------  -------  ------------  -----------  -----  ------  -----------------  ----  -----------\n> vmnic0  0000:19:00.0  bnxtnet  Up            Down             0  Half    e4:3d:1a:2c:68:f2  1500  Broadcom BCM57412 NetXtreme-E 10Gb RDMA Ethernet Controller\n> vmnic1  0000:19:00.1  bnxtnet  Up            Down             0  Half    e4:3d:1a:2c:68:f3  1500  Broadcom BCM57412 NetXtreme-E 10Gb RDMA Ethernet Controller\n> vmnic2  0000:01:00.0  ntg3     Up            Up            1000  Full    e4:3d:1a:2c:68:f0  1500  Broadcom Corporation NetXtreme BCM5720 Gigabit Ethernet\n> vmnic3  0000:01:00.1  ntg3     Up            Up             100  Full    e4:3d:1a:2c:68:f1  1500  Broadcom Corporation NetXtreme BCM5720 Gigabit Ethernet\n\nesxcli network ip interface list\n\n> vmk0\n>    Name: vmk0\n>    MAC Address: e4:3d:1a:2c:68:f0\n>    Enabled: true\n>    Portset: vSwitch0\n>    Portgroup: Management Network\n>    Netstack Instance: defaultTcpipStack\n>    VDS Name: N/A\n>    VDS UUID: N/A\n>    VDS Port: N/A\n>    VDS Connection: -1\n>    Opaque Network ID: N/A\n>    Opaque Network Type: N/A\n>    External ID: N/A\n>    MTU: 1500\n>    TSO MSS: 65535\n>    RXDispQueue Size: 4\n>    Port ID: 67108873\n>\n> vmk1\n>    Name: vmk1\n>    MAC Address: 00:50:56:6a:b3:d7\n>    Enabled: true\n>    Portset: vSwitch1\n>    Portgroup: Business Network\n>    Netstack Instance: defaultTcpipStack\n>    VDS Name: N/A\n>    VDS UUID: N/A\n>    VDS Port: N/A\n>    VDS Connection: -1\n>    Opaque Network ID: N/A\n>    Opaque Network Type: N/A\n>    External ID: N/A\n>    MTU: 1500\n>    TSO MSS: 65535\n>    RXDispQueue Size: 4\n>    Port ID: 100663311\n\nesxcfg-vmknic -l\n\n> Interface  Port Group/DVPort/Opaque Network        IP Family IP Address                              Netmask         Broadcast       MAC Address       MTU     TSO MSS   Enabled Type                NetStack\n> vmk0       Management Network                      IPv4      N/A                                     N/A             N/A             e4:3d:1a:2c:68:f0 1500    65535     true    NONE                defaultTcpipStack\n> vmk0       Management Network                      IPv6      fe80::e63d:1aff:fe2c:68f0               64                              e4:3d:1a:2c:68:f0 1500    65535     true    STATIC, PREFERRED   defaultTcpipStack\n> vmk1       Business Network                        IPv4      172.28.30.182                           255.255.254.0   172.28.31.255   00:50:56:6a:b3:d7 1500    65535     true    DHCP                defaultTcpipStack\n> vmk1       Business Network                        IPv6      fe80::250:56ff:fe6a:b3d7                64                              00:50:56:6a:b3:d7 1500    65535     true    STATIC, PREFERRED   defaultTcpipStack\n\n",
+  "created_time": 1751336900208,
+  "updated_time": 1761191720020,
+  "author": "",
+  "parent_id": "ec8031c8fd314213b391d006589cd073",
+  "type_": 1
+}
+[2026-02-04T06:10:22.712Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] processYamlFrontmatter 开始 {
+  "noteId": "f12633ab738b4e83b6dd05dd0a7c230c",
+  "noteTitle": "ESXi-支持日志"
+}
+[2026-02-04T06:10:22.712Z] [DEBUG] [joplin-plugin-typora-like-editor] 记录笔记文件夹关联 {
+  "noteId": "f12633ab738b4e83b6dd05dd0a7c230c",
+  "folderId": "ec8031c8fd314213b391d006589cd073"
+}
+[2026-02-04T06:10:22.712Z] [INFO] [joplin-plugin-typora-like-editor] 无原有YAML，生成新前沿信息（同步Joplin元数据）
+[2026-02-04T06:10:22.712Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] processYamlFrontmatter 结束
+[2026-02-04T06:10:22.712Z] [INFO] [joplin-plugin-typora-like-editor] 笔记【ESXi-支持日志】处理完成，已加入全局缓存 {
+  "noteId": "f12633ab738b4e83b6dd05dd0a7c230c",
+  "fileName": "ESXi-支持日志.md"
+}
+[2026-02-04T06:10:22.712Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:10:22.712Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 1,
+  "itemId": "a5549d15f90c43a18885c6b2c8b28ef7",
+  "style": 1
+}
+[2026-02-04T06:10:22.712Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理笔记基础信息 {
+  "id": "a5549d15f90c43a18885c6b2c8b28ef7",
+  "title": "ESXi-端口组与网卡映射的作用"
+}
+[2026-02-04T06:10:22.713Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理笔记完整属性 {
+  "id": "a5549d15f90c43a18885c6b2c8b28ef7",
+  "title": "ESXi-端口组与网卡映射的作用",
+  "body": "端口组（Port Group）与物理网卡（如 vmnicX）的映射是 ESXi 虚拟网络架构的核心机制，其作用主要体现在以下几个方面：\r\n\r\n一、核心功能\r\n\r\n\r\n流量隔离与分类\r\n\r\n不同端口组承载不同网络流量类型：\r\n\r\nManagement Network：ESXi 管理流量（SSH、Web 访问）\r\nVM Network：虚拟机业务流量\r\nvMotion：虚拟机迁移专用流量\r\n\r\n\r\n物理隔离：通过绑定到不同物理网卡（如 vmnic0 用于管理，vmnic1 用于业务），避免流量互相干扰。\r\n\r\n\r\n\r\n物理网络资源扩展\r\n\r\n多网卡绑定：一个端口组可映射到多个物理网卡（如 vmnic0 + vmnic1），实现：\r\n\r\n负载均衡：流量分摊提升带宽\r\n故障切换：单网卡故障时自动切换到备用网卡\r\n\r\n\r\n\r\n\r\n\r\n安全策略精细化\r\n\r\nVLAN 隔离：在端口组级别设置 VLAN ID（如 VLAN 10），使同一物理网卡传输不同 VLAN 流量，实现网络逻辑隔离。\r\n流量策略：可在端口组配置安全策略（如 MAC 地址过滤、混杂模式开关）。\r\n\r\n\r\n\r\n\r\n二、实际应用场景\r\n场景 1：业务流量优化\r\n\r\n需求：虚拟机需高速访问外部网络\r\n方案：\r\n\r\n创建专用端口组 VM-Traffic → 绑定到高性能物理网卡 vmnic2\r\n虚拟机网络适配器选择 VM-Traffic\r\n\r\n\r\n效果：业务流量独占物理带宽，避免被管理流量挤占。\r\n\r\n场景 2：高可用架构\r\n\r\n需求：防止物理网卡故障导致业务中断\r\n方案：\r\n\r\n端口组 Critical-VMs → 绑定 vmnic3 + vmnic4\r\n启用 故障切换策略（故障时自动切至 vmnic4）\r\n\r\n\r\n效果：单网卡故障时业务无感知。\r\n\r\n三、技术原理\r\n```mermaid\r\ngraph TB\r\n    subgraph 物理层\r\n        vmnic0[物理网卡 1] --> vSwitch\r\n        vmnic1[物理网卡 2] --> vSwitch\r\n    end\r\n\r\n    subgraph 虚拟层\r\n        vSwitch[虚拟交换机] --> PortGroup1[端口组 VLAN10]\r\n        vSwitch --> PortGroup2[端口组 VLAN20]\r\n        \r\n        PortGroup1 --> vmk0[管理接口]\r\n        PortGroup1 --> VM1[虚拟机 1]\r\n        PortGroup2 --> VM2[虚拟机 2]\r\n    end\r\n\r\n```\r\n\r\n\r\n\r\n\r\n箭头方向：\r\n虚拟机 → 端口组 → 虚拟交换机 → 物理网卡 → 外部网络\r\n关键规则：\r\n端口组是策略执行点，物理网卡是资源提供者。\r\n\r\n\r\n四、运维价值\r\n\r\n\r\n\r\n功能\r\n直接作用\r\n用户收益\r\n\r\n\r\n\r\n\r\n流量分类\r\n分离管理/业务/存储流量\r\n避免拥塞，提升性能\r\n\r\n\r\n多网卡绑定\r\n聚合带宽 + 故障转移\r\n网络高可用，吞吐量倍增\r\n\r\n\r\nVLAN 支持\r\n单物理网卡传输多逻辑网络\r\n节省硬件成本，简化布线\r\n\r\n\r\n安全策略挂载点\r\n在端口组级设置防火墙规则\r\n精准控制虚拟机网络安全\r\n\r\n\r\n\r\n\r\n五、配置注意事项\r\n\r\n避免单点故障：关键端口组至少绑定 2 块物理网卡\r\n性能匹配：\r\n\r\n万兆业务流量 → 绑定万兆物理网卡\r\n千兆管理流量 → 绑定千兆物理网卡\r\n\r\nVLAN 一致性：\r\n端口组 VLAN ID 需与物理交换机 Trunk 端口配置匹配。\r\n\r\n\r\n💡 总结：端口组与物理网卡的映射，本质是 将虚拟网络逻辑（端口组）锚定到物理硬件资源（网卡），是虚拟化环境中实现灵活组网、资源优化和安全管控的基石。",
+  "created_time": 1751357043044,
+  "updated_time": 1751689214441,
+  "author": "",
+  "parent_id": "ec8031c8fd314213b391d006589cd073",
+  "type_": 1
+}
+[2026-02-04T06:10:22.713Z] [DEBUG] [joplin-plugin-typora-like-editor] 记录笔记文件夹关联 {
+  "noteId": "a5549d15f90c43a18885c6b2c8b28ef7",
+  "folderId": "ec8031c8fd314213b391d006589cd073"
+}
+[2026-02-04T06:10:22.713Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] processYamlFrontmatter 开始 {
+  "noteId": "a5549d15f90c43a18885c6b2c8b28ef7",
+  "noteTitle": "ESXi-端口组与网卡映射的作用"
+}
+[2026-02-04T06:10:22.713Z] [INFO] [joplin-plugin-typora-like-editor] 无原有YAML，生成新前沿信息（同步Joplin元数据）
+[2026-02-04T06:10:22.713Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] processYamlFrontmatter 结束
+[2026-02-04T06:10:22.713Z] [INFO] [joplin-plugin-typora-like-editor] 笔记【ESXi-端口组与网卡映射的作用】处理完成，已加入全局缓存 {
+  "noteId": "a5549d15f90c43a18885c6b2c8b28ef7",
+  "fileName": "ESXi-端口组与网卡映射的作用.md"
+}
+[2026-02-04T06:10:22.714Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onClose 开始 {
+  "destPath": "C:\\Users\\xxx\\Downloads\\04_02_2026.md",
+  "style": 1
+}
+[2026-02-04T06:10:22.713Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:10:22.714Z] [INFO] [joplin-plugin-typora-like-editor] 开始分别保存 5 个笔记
+[2026-02-04T06:10:22.715Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] replaceResourceLinks 开始 {
+  "noteId": "15c88f27e2e549e6a51e2747d3b15903",
+  "resourceMapSize": 5
+}
+[2026-02-04T06:10:22.715Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源链接替换：![esxi图形化管理1](:/ba1e1695704a44f9bed7344f38331442) -> ![esxi图形化管理1](./assets/esxi图形化管理1.png)
+[2026-02-04T06:10:22.715Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源链接替换：![esxi-gpumanager](:/76d6eb45a39347699ca8534042185a96) -> ![esxi-gpumanager](./assets/esxi-gpumanager.png)
+[2026-02-04T06:10:22.715Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源链接替换：![esxi图形化管理-GPU直通](:/b4e81fc96a994d0e991104bc35682185) -> ![esxi图形化管理-GPU直通](./assets/esxi图形化管理-GPU直通.png)
+[2026-02-04T06:10:22.715Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] replaceResourceLinks 结束 {
+  "替换数量": 4
+}
+[2026-02-04T06:10:22.715Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源链接替换：![ESXi主机与虚拟机互联](:/7fe70bf5565940fc935782a7c90f79f8) -> ![ESXi主机与虚拟机互联](./assets/ESXi主机与虚拟机互联.png)
+[2026-02-04T06:10:22.716Z] [INFO] [joplin-plugin-typora-like-editor] 笔记已保存：C:\Users\xxx\Downloads\Notes\科研工作\计算机与代码\esxi\ESXi-r740.md
+[2026-02-04T06:10:22.717Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] replaceResourceLinks 结束 {
+  "替换数量": 0
+}
+[2026-02-04T06:10:22.716Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] replaceResourceLinks 开始 {
+  "noteId": "a465bad8328a4295a29dd514f7173c22",
+  "resourceMapSize": 5
+}
+[2026-02-04T06:10:22.717Z] [INFO] [joplin-plugin-typora-like-editor] 笔记已保存：C:\Users\xxx\Downloads\Notes\科研工作\计算机与代码\esxi\ESXi-vSwitch的作用.md
+[2026-02-04T06:10:22.717Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] replaceResourceLinks 结束 {
+  "替换数量": 0
+}
+[2026-02-04T06:10:22.717Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] replaceResourceLinks 开始 {
+  "noteId": "24c8caba01544d8f9a7ec620f6dc9d27",
+  "resourceMapSize": 5
+}
+[2026-02-04T06:10:22.718Z] [INFO] [joplin-plugin-typora-like-editor] 笔记已保存：C:\Users\xxx\Downloads\Notes\科研工作\计算机与代码\esxi\ESXi-技术外援.md
+[2026-02-04T06:10:22.718Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] replaceResourceLinks 开始 {
+  "noteId": "f12633ab738b4e83b6dd05dd0a7c230c",
+  "resourceMapSize": 5
+}
+[2026-02-04T06:10:22.718Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源链接替换：![ESXi主机与虚拟机互联](:/0dccf72b8fbc4c1581a91b0e289ac49e) -> ![ESXi主机与虚拟机互联](./assets/ESXi主机与虚拟机互联.png)
+[2026-02-04T06:10:22.718Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] replaceResourceLinks 结束 {
+  "替换数量": 1
+}
+[2026-02-04T06:10:22.719Z] [INFO] [joplin-plugin-typora-like-editor] 笔记已保存：C:\Users\xxx\Downloads\Notes\科研工作\计算机与代码\esxi\ESXi-支持日志.md
+[2026-02-04T06:10:22.719Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] replaceResourceLinks 开始 {
+  "noteId": "a5549d15f90c43a18885c6b2c8b28ef7",
+  "resourceMapSize": 5
+}
+[2026-02-04T06:10:22.719Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] replaceResourceLinks 结束 {
+  "替换数量": 0
+}
+[2026-02-04T06:10:22.720Z] [INFO] [joplin-plugin-typora-like-editor] 笔记已保存：C:\Users\xxx\Downloads\Notes\科研工作\计算机与代码\esxi\ESXi-端口组与网卡映射的作用.md
+[2026-02-04T06:10:22.720Z] [INFO] [joplin-plugin-typora-like-editor] 导出成功！共保存 5 个笔记
+[2026-02-04T06:10:22.720Z] [INFO] [joplin-plugin-typora-like-editor] 导出路径样式：1
+[2026-02-04T06:10:22.720Z] [INFO] [joplin-plugin-typora-like-editor] 资源总数：5 个
+[2026-02-04T06:10:22.720Z] [INFO] [joplin-plugin-typora-like-editor] 保存合并内容：false
+[2026-02-04T06:10:22.720Z] [DEBUG] [joplin-plugin-typora-like-editor] 全局缓存已重置
+[2026-02-04T06:10:22.720Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onClose 结束
+[2026-02-04T06:11:54.761Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onInit 开始 {
+  "destPath": "C:\\Users\\xxx\\Downloads\\04_02_2026.md"
+}
+[2026-02-04T06:11:54.765Z] [INFO] [joplin-plugin-typora-like-editor] 当前导出路径样式 {
+  "rawValue": 1,
+  "convertedValue": 1,
+  "styleName": "层次结构"
+}
+[2026-02-04T06:11:54.767Z] [INFO] [joplin-plugin-typora-like-editor] 层次结构模式：开始预加载所有文件夹信息
+[2026-02-04T06:11:54.767Z] [INFO] [joplin-plugin-typora-like-editor] 当前保存合并内容开关 {
+  "enabled": false
+}
+[2026-02-04T06:11:54.769Z] [INFO] [joplin-plugin-typora-like-editor] 文件夹预加载完成，共加载 26 个文件夹
+[2026-02-04T06:11:54.769Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onInit 结束
+[2026-02-04T06:11:54.769Z] [INFO] [joplin-plugin-typora-like-editor] 导出初始化完成，全局缓存已清空
+[2026-02-04T06:11:54.772Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 2,
+  "itemId": "ec8031c8fd314213b391d006589cd073",
+  "style": 1
+}
+[2026-02-04T06:11:54.772Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:11:54.773Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 开始 {
+  "resourceId": "76d6eb45a39347699ca8534042185a96",
+  "filePath": "C:/Users/xxx/.config/joplin-desktop/resources/76d6eb45a39347699ca8534042185a96.png",
+  "style": 1
+}
+[2026-02-04T06:11:54.773Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理资源完整属性 {
+  "id": "76d6eb45a39347699ca8534042185a96"
+}
+[2026-02-04T06:11:54.773Z] [DEBUG] [joplin-plugin-typora-like-editor] 使用层次结构模式处理资源
+[2026-02-04T06:11:54.774Z] [INFO] [joplin-plugin-typora-like-editor] resourceNotes:  {
+  "items": [
+    {
+      "id": "15c88f27e2e549e6a51e2747d3b15903",
+      "parent_id": "ec8031c8fd314213b391d006589cd073",
+      "title": "ESXi-r740",
+      "deleted_time": 0
+    }
+  ],
+  "has_more": false
+}
+[2026-02-04T06:11:54.774Z] [DEBUG] [joplin-plugin-typora-like-editor] 层次结构资源路径计算 {
+  "noteId": "15c88f27e2e549e6a51e2747d3b15903",
+  "folderId": "ec8031c8fd314213b391d006589cd073",
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets",
+  "resFileName": "esxi-gpumanager.png",
+  "resDestPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\esxi-gpumanager.png",
+  "resRelativePath": "./assets/esxi-gpumanager.png"
+}
+[2026-02-04T06:11:54.776Z] [INFO] [joplin-plugin-typora-like-editor] 创建文件夹和assets目录 {
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets"
+}
+[2026-02-04T06:11:54.777Z] [INFO] [joplin-plugin-typora-like-editor] 资源复制完成 {
+  "from": "C:/Users/xxx/.config/joplin-desktop/resources/76d6eb45a39347699ca8534042185a96.png",
+  "to": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\esxi-gpumanager.png"
+}
+[2026-02-04T06:11:54.777Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 结束
+[2026-02-04T06:11:54.777Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源映射已记录 {
+  "resourceKey": "15c88f27e2e549e6a51e2747d3b15903_76d6eb45a39347699ca8534042185a96",
+  "relativePath": "./assets/esxi-gpumanager.png"
+}
+[2026-02-04T06:11:54.779Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 4,
+  "itemId": "76d6eb45a39347699ca8534042185a96",
+  "style": 1
+}
+[2026-02-04T06:11:54.779Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:11:54.780Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 开始 {
+  "resourceId": "7fe70bf5565940fc935782a7c90f79f8",
+  "filePath": "C:/Users/xxx/.config/joplin-desktop/resources/7fe70bf5565940fc935782a7c90f79f8.png",
+  "style": 1
+}
+[2026-02-04T06:11:54.780Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理资源完整属性 {
+  "id": "7fe70bf5565940fc935782a7c90f79f8"
+}
+[2026-02-04T06:11:54.780Z] [DEBUG] [joplin-plugin-typora-like-editor] 使用层次结构模式处理资源
+[2026-02-04T06:11:54.781Z] [INFO] [joplin-plugin-typora-like-editor] resourceNotes:  {
+  "items": [
+    {
+      "id": "15c88f27e2e549e6a51e2747d3b15903",
+      "parent_id": "ec8031c8fd314213b391d006589cd073",
+      "title": "ESXi-r740",
+      "deleted_time": 0
+    }
+  ],
+  "has_more": false
+}
+[2026-02-04T06:11:54.781Z] [DEBUG] [joplin-plugin-typora-like-editor] 层次结构资源路径计算 {
+  "noteId": "15c88f27e2e549e6a51e2747d3b15903",
+  "folderId": "ec8031c8fd314213b391d006589cd073",
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets",
+  "resFileName": "ESXi主机与虚拟机互联.png",
+  "resDestPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\ESXi主机与虚拟机互联.png",
+  "resRelativePath": "./assets/ESXi主机与虚拟机互联.png"
+}
+[2026-02-04T06:11:54.782Z] [INFO] [joplin-plugin-typora-like-editor] 创建文件夹和assets目录 {
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets"
+}
+[2026-02-04T06:11:54.783Z] [INFO] [joplin-plugin-typora-like-editor] 资源复制完成 {
+  "from": "C:/Users/xxx/.config/joplin-desktop/resources/7fe70bf5565940fc935782a7c90f79f8.png",
+  "to": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\ESXi主机与虚拟机互联.png"
+}
+[2026-02-04T06:11:54.783Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源映射已记录 {
+  "resourceKey": "15c88f27e2e549e6a51e2747d3b15903_7fe70bf5565940fc935782a7c90f79f8",
+  "relativePath": "./assets/ESXi主机与虚拟机互联.png"
+}
+[2026-02-04T06:11:54.783Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 结束
+[2026-02-04T06:11:54.784Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:11:54.784Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 4,
+  "itemId": "7fe70bf5565940fc935782a7c90f79f8",
+  "style": 1
+}
+[2026-02-04T06:11:54.785Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 开始 {
+  "resourceId": "b4e81fc96a994d0e991104bc35682185",
+  "filePath": "C:/Users/xxx/.config/joplin-desktop/resources/b4e81fc96a994d0e991104bc35682185.png",
+  "style": 1
+}
+[2026-02-04T06:11:54.785Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理资源完整属性 {
+  "id": "b4e81fc96a994d0e991104bc35682185"
+}
+[2026-02-04T06:11:54.786Z] [DEBUG] [joplin-plugin-typora-like-editor] 使用层次结构模式处理资源
+[2026-02-04T06:11:54.787Z] [INFO] [joplin-plugin-typora-like-editor] resourceNotes:  {
+  "items": [
+    {
+      "id": "15c88f27e2e549e6a51e2747d3b15903",
+      "parent_id": "ec8031c8fd314213b391d006589cd073",
+      "title": "ESXi-r740",
+      "deleted_time": 0
+    }
+  ],
+  "has_more": false
+}
+[2026-02-04T06:11:54.788Z] [DEBUG] [joplin-plugin-typora-like-editor] 层次结构资源路径计算 {
+  "noteId": "15c88f27e2e549e6a51e2747d3b15903",
+  "folderId": "ec8031c8fd314213b391d006589cd073",
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets",
+  "resFileName": "esxi图形化管理-GPU直通.png",
+  "resDestPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\esxi图形化管理-GPU直通.png",
+  "resRelativePath": "./assets/esxi图形化管理-GPU直通.png"
+}
+[2026-02-04T06:11:54.788Z] [INFO] [joplin-plugin-typora-like-editor] 创建文件夹和assets目录 {
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets"
+}
+[2026-02-04T06:11:54.789Z] [INFO] [joplin-plugin-typora-like-editor] 资源复制完成 {
+  "from": "C:/Users/xxx/.config/joplin-desktop/resources/b4e81fc96a994d0e991104bc35682185.png",
+  "to": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\esxi图形化管理-GPU直通.png"
+}
+[2026-02-04T06:11:54.789Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源映射已记录 {
+  "resourceKey": "15c88f27e2e549e6a51e2747d3b15903_b4e81fc96a994d0e991104bc35682185",
+  "relativePath": "./assets/esxi图形化管理-GPU直通.png"
+}
+[2026-02-04T06:11:54.789Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 结束
+[2026-02-04T06:11:54.790Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 4,
+  "itemId": "b4e81fc96a994d0e991104bc35682185",
+  "style": 1
+}
+[2026-02-04T06:11:54.790Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:11:54.791Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 开始 {
+  "resourceId": "ba1e1695704a44f9bed7344f38331442",
+  "filePath": "C:/Users/xxx/.config/joplin-desktop/resources/ba1e1695704a44f9bed7344f38331442.png",
+  "style": 1
+}
+[2026-02-04T06:11:54.791Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理资源完整属性 {
+  "id": "ba1e1695704a44f9bed7344f38331442"
+}
+[2026-02-04T06:11:54.792Z] [DEBUG] [joplin-plugin-typora-like-editor] 使用层次结构模式处理资源
+[2026-02-04T06:11:54.793Z] [INFO] [joplin-plugin-typora-like-editor] resourceNotes:  {
+  "items": [
+    {
+      "id": "15c88f27e2e549e6a51e2747d3b15903",
+      "parent_id": "ec8031c8fd314213b391d006589cd073",
+      "title": "ESXi-r740",
+      "deleted_time": 0
+    }
+  ],
+  "has_more": false
+}
+[2026-02-04T06:11:54.793Z] [DEBUG] [joplin-plugin-typora-like-editor] 层次结构资源路径计算 {
+  "noteId": "15c88f27e2e549e6a51e2747d3b15903",
+  "folderId": "ec8031c8fd314213b391d006589cd073",
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets",
+  "resFileName": "esxi图形化管理1.png",
+  "resDestPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\esxi图形化管理1.png",
+  "resRelativePath": "./assets/esxi图形化管理1.png"
+}
+[2026-02-04T06:11:54.794Z] [INFO] [joplin-plugin-typora-like-editor] 创建文件夹和assets目录 {
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets"
+}
+[2026-02-04T06:11:54.795Z] [INFO] [joplin-plugin-typora-like-editor] 资源复制完成 {
+  "from": "C:/Users/xxx/.config/joplin-desktop/resources/ba1e1695704a44f9bed7344f38331442.png",
+  "to": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\esxi图形化管理1.png"
+}
+[2026-02-04T06:11:54.795Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源映射已记录 {
+  "resourceKey": "15c88f27e2e549e6a51e2747d3b15903_ba1e1695704a44f9bed7344f38331442",
+  "relativePath": "./assets/esxi图形化管理1.png"
+}
+[2026-02-04T06:11:54.795Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 结束
+[2026-02-04T06:11:54.796Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 4,
+  "itemId": "ba1e1695704a44f9bed7344f38331442",
+  "style": 1
+}
+[2026-02-04T06:11:54.796Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:11:54.799Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 开始 {
+  "resourceId": "0dccf72b8fbc4c1581a91b0e289ac49e",
+  "filePath": "C:/Users/xxx/.config/joplin-desktop/resources/0dccf72b8fbc4c1581a91b0e289ac49e.png",
+  "style": 1
+}
+[2026-02-04T06:11:54.799Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理资源完整属性 {
+  "id": "0dccf72b8fbc4c1581a91b0e289ac49e"
+}
+[2026-02-04T06:11:54.800Z] [DEBUG] [joplin-plugin-typora-like-editor] 使用层次结构模式处理资源
+[2026-02-04T06:11:54.801Z] [INFO] [joplin-plugin-typora-like-editor] resourceNotes:  {
+  "items": [
+    {
+      "id": "f12633ab738b4e83b6dd05dd0a7c230c",
+      "parent_id": "ec8031c8fd314213b391d006589cd073",
+      "title": "ESXi-支持日志",
+      "deleted_time": 0
+    }
+  ],
+  "has_more": false
+}
+[2026-02-04T06:11:54.801Z] [DEBUG] [joplin-plugin-typora-like-editor] 层次结构资源路径计算 {
+  "noteId": "f12633ab738b4e83b6dd05dd0a7c230c",
+  "folderId": "ec8031c8fd314213b391d006589cd073",
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets",
+  "resFileName": "ESXi主机与虚拟机互联.png",
+  "resDestPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\ESXi主机与虚拟机互联.png",
+  "resRelativePath": "./assets/ESXi主机与虚拟机互联.png"
+}
+[2026-02-04T06:11:54.802Z] [INFO] [joplin-plugin-typora-like-editor] 创建文件夹和assets目录 {
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets"
+}
+[2026-02-04T06:11:54.803Z] [INFO] [joplin-plugin-typora-like-editor] 资源复制完成 {
+  "from": "C:/Users/xxx/.config/joplin-desktop/resources/0dccf72b8fbc4c1581a91b0e289ac49e.png",
+  "to": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\ESXi主机与虚拟机互联.png"
+}
+[2026-02-04T06:11:54.803Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源映射已记录 {
+  "resourceKey": "f12633ab738b4e83b6dd05dd0a7c230c_0dccf72b8fbc4c1581a91b0e289ac49e",
+  "relativePath": "./assets/ESXi主机与虚拟机互联.png"
+}
+[2026-02-04T06:11:54.803Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 结束
+[2026-02-04T06:11:54.806Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 4,
+  "itemId": "0dccf72b8fbc4c1581a91b0e289ac49e",
+  "style": 1
+}
+[2026-02-04T06:11:54.806Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:11:54.811Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 1,
+  "itemId": "15c88f27e2e549e6a51e2747d3b15903",
+  "style": 1
+}
+[2026-02-04T06:11:54.811Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理笔记基础信息 {
+  "id": "15c88f27e2e549e6a51e2747d3b15903",
+  "title": "ESXi-r740"
+}
+[2026-02-04T06:11:54.813Z] [DEBUG] [joplin-plugin-typora-like-editor] 记录笔记文件夹关联 {
+  "noteId": "15c88f27e2e549e6a51e2747d3b15903",
+  "folderId": "ec8031c8fd314213b391d006589cd073"
+}
+[2026-02-04T06:11:54.813Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理笔记完整属性 {
+  "id": "15c88f27e2e549e6a51e2747d3b15903",
+  "title": "ESXi-r740",
+  "body": "![esxi图形化管理1](:/ba1e1695704a44f9bed7344f38331442)\n\n![esxi-gpumanager](:/76d6eb45a39347699ca8534042185a96)\n\n![ESXi主机与虚拟机互联](:/7fe70bf5565940fc935782a7c90f79f8)\n\n![esxi图形化管理-GPU直通](:/b4e81fc96a994d0e991104bc35682185)\n\n\n\n",
+  "created_time": 1761190403797,
+  "updated_time": 1761190828375,
+  "author": "",
+  "parent_id": "ec8031c8fd314213b391d006589cd073",
+  "type_": 1
+}
+[2026-02-04T06:11:54.813Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] processYamlFrontmatter 开始 {
+  "noteId": "15c88f27e2e549e6a51e2747d3b15903",
+  "noteTitle": "ESXi-r740"
+}
+[2026-02-04T06:11:54.814Z] [INFO] [joplin-plugin-typora-like-editor] 无原有YAML，生成新前沿信息（同步Joplin元数据）
+[2026-02-04T06:11:54.814Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] processYamlFrontmatter 结束
+[2026-02-04T06:11:54.814Z] [INFO] [joplin-plugin-typora-like-editor] 笔记【ESXi-r740】处理完成，已加入全局缓存 {
+  "noteId": "15c88f27e2e549e6a51e2747d3b15903",
+  "fileName": "ESXi-r740.md"
+}
+[2026-02-04T06:11:54.814Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:11:54.816Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 1,
+  "itemId": "a465bad8328a4295a29dd514f7173c22",
+  "style": 1
+}
+[2026-02-04T06:11:54.816Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理笔记基础信息 {
+  "id": "a465bad8328a4295a29dd514f7173c22",
+  "title": "ESXi-vSwitch的作用"
+}
+[2026-02-04T06:11:54.818Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理笔记完整属性 {
+  "id": "a465bad8328a4295a29dd514f7173c22",
+  "title": "ESXi-vSwitch的作用",
+  "body": "虚拟交换机（vSwitch）是 ESXi 网络架构的核心组件，其作用类似于物理交换机，但专为虚拟化环境设计。以下是它的核心功能和实际价值：\n\n### 一、核心作用\n\n连通虚拟与物理网络\n物理层接入：绑定物理网卡（vmnicX），将 ESXi主机连接到外部网络（如路由器、存储网络）。\n虚拟层分发：为虚拟机、管理接口（vmkX）提供网络端口，实现内外网通信。\n隔离与组织网络流量：通过端口组（Port Group）划分逻辑网络（如管理、业务、存储），不同流量互不干扰。\n示例：\nManagement 端口组 → 传输 ESXi 管理流量（SSH/Web）\nVM Network 端口组 → 承载虚拟机业务流量\nvMotion 端口组 → 专用虚拟机迁移通道\n实施网络策略\n安全策略：MAC 地址过滤、拒绝混杂模式（防止嗅探攻击）。\n流量策略：\n\n- 负载均衡：在多块物理网卡间分配流量（如 基于IP哈希）。\n\n- 故障切换：自动切换至备用网卡（物理网卡故障时）。\n\n- 带宽控制：限制端口组流量速率（如保障关键业务带宽）。\n\n## 二、实际应用场景\n\n  场景 1：虚拟机网络互通\n  问题：多台虚拟机需互相通信（如 Web 服务器访问数据库）。\n  方案：虚拟机网卡接入同一 vSwitch 的端口组 →数据直接在主机内存交换（无需经过物理网络），延迟低于 1ms。\n  场景 2：高可用网络架构\n  问题：物理网卡故障导致业务中断。\n  方案：vSwitch 绑定多块物理网卡（如 vmnic0 + vmnic1）→ 启用 故障切换策略→ 单网卡故障时业务无感知。\n  场景 3：网络性能优化\n  需求：虚拟机需万兆带宽访问 NAS 存储。\n  方案：创建专用 vSwitch → 绑定万兆物理网卡 → 虚拟机通过此 vSwitch直连存储网络。\n\n##   四、工作流程示例\n\n  \n\n```mermaid\ngraph LR\n  A[虚拟机 VM1] -->|发送数据包| B(端口组 PG1)\n  B --> C[vSwitch]\n  C -->|同主机通信| D[虚拟机 VM2]\n  C -->|访问外网| E[物理网卡 vmnic0] --> F[外部网络]\n```\n\n ",
+  "created_time": 1753161617883,
+  "updated_time": 1761191716777,
+  "author": "",
+  "parent_id": "ec8031c8fd314213b391d006589cd073",
+  "type_": 1
+}
+[2026-02-04T06:11:54.818Z] [DEBUG] [joplin-plugin-typora-like-editor] 记录笔记文件夹关联 {
+  "noteId": "a465bad8328a4295a29dd514f7173c22",
+  "folderId": "ec8031c8fd314213b391d006589cd073"
+}
+[2026-02-04T06:11:54.818Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] processYamlFrontmatter 开始 {
+  "noteId": "a465bad8328a4295a29dd514f7173c22",
+  "noteTitle": "ESXi-vSwitch的作用"
+}
+[2026-02-04T06:11:54.818Z] [INFO] [joplin-plugin-typora-like-editor] 无原有YAML，生成新前沿信息（同步Joplin元数据）
+[2026-02-04T06:11:54.818Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] processYamlFrontmatter 结束
+[2026-02-04T06:11:54.819Z] [INFO] [joplin-plugin-typora-like-editor] 笔记【ESXi-vSwitch的作用】处理完成，已加入全局缓存 {
+  "noteId": "a465bad8328a4295a29dd514f7173c22",
+  "fileName": "ESXi-vSwitch的作用.md"
+}
+[2026-02-04T06:11:54.819Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:11:54.820Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 1,
+  "itemId": "24c8caba01544d8f9a7ec620f6dc9d27",
+  "style": 1
+}
+[2026-02-04T06:11:54.820Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理笔记基础信息 {
+  "id": "24c8caba01544d8f9a7ec620f6dc9d27",
+  "title": "ESXi-技术外援"
+}
+[2026-02-04T06:11:54.822Z] [DEBUG] [joplin-plugin-typora-like-editor] 记录笔记文件夹关联 {
+  "noteId": "24c8caba01544d8f9a7ec620f6dc9d27",
+  "folderId": "ec8031c8fd314213b391d006589cd073"
+}
+[2026-02-04T06:11:54.822Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理笔记完整属性 {
+  "id": "24c8caba01544d8f9a7ec620f6dc9d27",
+  "title": "ESXi-技术外援",
+  "body": "# 技术支持\r\n\r\n[TOC]\r\n\r\n## 单台主机\r\n\r\n网络拓扑：\r\n\r\n```mermaid\r\ngraph TD;\r\n    A(外网)-->B(外网-网页认证);\r\n\tB-->C(外网网口)\r\n    AA(内网)-->BB(内网-网页认证);\r\n\tBB-->CC(内网网口)\r\n\tPC(ESXi主机)\r\n\tC-->PC\r\n\tCC-->PC\r\n\tVM1(虚拟机1)\r\n    VM2(虚拟机2)\r\n    VMx(虚拟机...)\r\n    PC-->VM1\r\n    PC-->VM2\r\n    PC-->VMx\r\n```\r\n\r\n我希望：\r\n\r\n- 如何外网SSH和网页访问ESXi操作系统。\r\n- 同时，内网也可以访问ESXi。\r\n- 同时，外网和网页ssh到ESXi的虚拟机。\r\n\r\n怎么做：\r\n\r\n- 我的困惑点：ESXi可以进行网页认证吗，需要安装浏览器吗？\r\n\r\n- 虚拟机与ESXi主机使用NAT，还是桥接，还是什么网络方案？\r\n\r\n- 如果考虑加入路由器来连接多台ESXi主机，ESXi能通过网页认证吗？\r\n\r\n## 多台主机\r\n\r\n```mermaid\r\ngraph TD\r\n\tNP{Network port}\r\n\trouter(Router)\t\r\n\tHost1(Host Machine 1)\r\n\tVm1_h1(Virtual Machine 1)\r\n\tVm2_h1(Virtual Machine 2)\r\n\tVmn_h1(Virtual Machine n)\r\n\tHost2(Host Machine 2)\r\n\tVm1_h2(Virtual Machine 1)\r\n\tVm2_h2(Virtual Machine 2)\r\n\tVmn_h2(Virtual Machine n)\r\n\tHost3(Host Machine 3)\r\n\tVm1_h3(Virtual Machine 1)\r\n\tVm2_h3(Virtual Machine 2)\r\n\tVmn_h3(Virtual Machine n)\r\n\t\r\n\tInternet((Internet))-->NP(RJ45)\r\n\tNP--Authentication-->router-->Host1\r\n\trouter-->Host2\r\n\trouter-->Host3\r\n\t\r\n\tHost1-->Vm1_h1\r\n\tHost1-->Vm2_h1\r\n\tHost1-->Vmn_h1\r\n\t\r\n\tHost2-->Vm1_h2\r\n\tHost2-->Vm2_h2\r\n\tHost2-->Vmn_h2\r\n\t\r\n\tHost3-->Vm1_h3\r\n\tHost3-->Vm2_h3\r\n\tHost3-->Vmn_h3\r\n```\r\n\r\n### 技术要点\r\n\r\n- 理由器能完成认证。\r\n\r\n- 物理主机能安装DDNS客户端或者等效功能。\r\n\r\n## 工况检测\r\n\r\n吴老师，初步整理了一下列表，澄清一下现网信息：\r\n| 问题Q                                                        | 答案A                          |\r\n| ------------------------------------------------------------ | ------------------------------ |\r\n| 1.网络拓扑图结构是怎么样的?                                  |                                |\r\n| 2.本机的网口是双网口么，一个连外网，一个连内网？             |                                |\r\n| 2.1 是否已经连上了院内网络的主交换机或者路由器？             |                                |\r\n| 2.2 是否已经连上了院内的防火墙？网口现在连接状态是否OK的？   |                                |\r\n| 3. 目前的问题主要就是，无法自动开机连接网络么？是无法连接内网，还是无法连接外网？ |                                |\r\n| 管理网络参数是咋样的：                                       |                                |\r\n| 4.1 IP地址、子网掩码、默认网关                               |                                |\r\n| 4.2 是否存在Vlan划分                                         |                                |\r\n| 4.3 DNS服务器地址是咋样的                                    |                                |\r\n| 5. 是否有本机的超级权限？                                    | 有root权限                     |\r\n| 6. 目前网络登录认证是采用的AD/LDAP的么？是否已经有了AD/LDAP 认证的系统的账号和密码？认证服务的服务器地址是咋样的？ | ESXi 8.0.3U3无curl命令行工具。 |\r\n| 7. 现在咱们应该是安装的Ubuntu系统吧，如果现在没有登陆上网络，但是又需要完成AD/LDAP的话，有安装过相应的网络工具么，如：sssd、realmd 及其依赖包 |                                |\r\n\r\n",
+  "created_time": 1750828676486,
+  "updated_time": 1751696295640,
+  "author": "",
+  "parent_id": "ec8031c8fd314213b391d006589cd073",
+  "type_": 1
+}
+[2026-02-04T06:11:54.822Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] processYamlFrontmatter 开始 {
+  "noteId": "24c8caba01544d8f9a7ec620f6dc9d27",
+  "noteTitle": "ESXi-技术外援"
+}
+[2026-02-04T06:11:54.822Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] processYamlFrontmatter 结束
+[2026-02-04T06:11:54.822Z] [INFO] [joplin-plugin-typora-like-editor] 无原有YAML，生成新前沿信息（同步Joplin元数据）
+[2026-02-04T06:11:54.822Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:11:54.822Z] [INFO] [joplin-plugin-typora-like-editor] 笔记【ESXi-技术外援】处理完成，已加入全局缓存 {
+  "noteId": "24c8caba01544d8f9a7ec620f6dc9d27",
+  "fileName": "ESXi-技术外援.md"
+}
+[2026-02-04T06:11:54.823Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 1,
+  "itemId": "f12633ab738b4e83b6dd05dd0a7c230c",
+  "style": 1
+}
+[2026-02-04T06:11:54.823Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理笔记基础信息 {
+  "id": "f12633ab738b4e83b6dd05dd0a7c230c",
+  "title": "ESXi-支持日志"
+}
+[2026-02-04T06:11:54.825Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理笔记完整属性 {
+  "id": "f12633ab738b4e83b6dd05dd0a7c230c",
+  "title": "ESXi-支持日志",
+  "body": "# ESXi基本知识\n\n## 基本概念\n\n物理网卡：vmnicX 是 ESXi 识别的物理网卡（如主板网口、PCIe 网卡）。\n\n虚拟交换机：需要分配物理网卡（上行链路），才能上网。需要添加端口组，用于隔离不同流量。\n\nQ: ESXi中两个虚拟机分别连接同一个虚拟交换机的不同端口组，能实现互相ping通吗？\n\nA: 在VMware ESXi环境中，**两个虚拟机连接到同一个虚拟交换机（vSwitch）的不同端口组（Port Group）时，默认情况下可以互相ping通**，但实际连通性取决于端口组的网络策略配置。\n\n| **场景**             | 能否ping通 | 条件说明                   |\n| :------------------- | :--------- | :------------------------- |\n| 同vSwitch + 同VLAN   | ✅ 是       | 默认策略下直接互通         |\n| 同vSwitch + 不同VLAN | ❌ 否       | 需三层路由                 |\n| 安全策略阻断         | ❌ 否       | 检查MAC/伪传输设置         |\n| 防火墙拦截           | ❌ 否       | 关闭ESXi或虚拟机防火墙测试 |\n\n\n\n## 虚拟机连外网-何钢\n\n1. 启用双网口\n2. 创建新交换机\n    esxcli network vswitch standard add -v vSwitch1\n\n3. 将 vmnic3 分配给新交换机\n    esxcli network vswitch standard uplink add -u vmnic3 -v vSwitch1\n\n4. 创建业务网络端口组\n    esxcli network vswitch standard portgroup add -p \"BusinessNetwork\" -v vSwitch1\n\n5. 双网口非管理网口手动设置IP\n   ```esxi-shell\n   esxcli network ip interface ipv4 set \\\n    -i vmk1 \\\n    -t static \\\n    -I 172.28.30.219 \\\n    -N 255.255.254.0 \\\n    -g 172.28.30.1 \n   ```\n\n6. 在Web网页设置业务网口所在的端口组赋值给虚拟机\n   直接创建端口组，选中vSwitch1. 以前在：esxcli network vswitch standard add -v vSwitch1 这里面创建的.\n7. 虚拟机新建网络，选中刚创建的端口组BusinessNetwork\n8. 启动虚拟机\n\n成功案例如下图。\n\n![ESXi主机与虚拟机互联](:/0dccf72b8fbc4c1581a91b0e289ac49e)\n\n| **类型**      | **作用**                      | **绑定对象**       |\n| :------------ | :---------------------------- | :----------------- |\n| 上行链路端口  | 连接物理网络                  | 物理网卡（vmnic）  |\n| 虚拟机端口组  | 为虚拟机提供网络连接          | 虚拟机网卡（vNIC） |\n| VMKernel 端口 | 处理管理流量、vMotion、存储等 | ESXi 系统服务      |\n\n```mermaid\ngraph LR\n    A[虚拟机 VM1] -->|网络适配器| B(端口组 VM Network)\n    B --> C[虚拟交换机 vSwitch1]\n    C --> D[物理网卡 vmnic1] --> E[物理网络]\n    C --> F[主机管理接口 vmk0] --> G[ESXi 管理流量]\n```\n\n| cmd                                            | 目的                                                         |\n| ---------------------------------------------- | ------------------------------------------------------------ |\n| esxcli network vswitch standard portgroup list |                                                              |\n| esxcli network ip interface ipv4 address list  | 查看所有网络接口的 IPv4 配置                                 |\n| esxcli network nic list                        | 多网卡场景：先确认物理网卡名（如 vmnic0），再关联到对应的 vmkX 接口。 |\n| esxcli network ip interface list               | 用于列出 ESXi 系统上所有网络接口的 IP 配置信息               |\n| esxcfg-vswitch -l                              | 检查端口组与网卡映射                                         |\n| esxcli network nic get -n vmnic0               | 检查物理网卡是否启用（Link Status: Up）                      |\n| esxcli network vswitch standard list           | 查看虚拟交换机绑定关系                                       |\n| esxcli network vm list -v <虚拟机ID>           | 查看虚拟机网络绑定                                           |\n| vmkping -I vSwitch0_IP 目标IP                  | 测试特定 vSwitch 连通性                                      |\n\nesxcli network nic list\n\n> Name    PCI Device    Driver   Admin Status  Link Status  Speed  Duplex  MAC Address         MTU  Description\n> ------  ------------  -------  ------------  -----------  -----  ------  -----------------  ----  -----------\n> vmnic0  0000:19:00.0  bnxtnet  Up            Down             0  Half    e4:3d:1a:2c:68:f2  1500  Broadcom BCM57412 NetXtreme-E 10Gb RDMA Ethernet Controller\n> vmnic1  0000:19:00.1  bnxtnet  Up            Down             0  Half    e4:3d:1a:2c:68:f3  1500  Broadcom BCM57412 NetXtreme-E 10Gb RDMA Ethernet Controller\n> vmnic2  0000:01:00.0  ntg3     Up            Up            1000  Full    e4:3d:1a:2c:68:f0  1500  Broadcom Corporation NetXtreme BCM5720 Gigabit Ethernet\n> vmnic3  0000:01:00.1  ntg3     Up            Up             100  Full    e4:3d:1a:2c:68:f1  1500  Broadcom Corporation NetXtreme BCM5720 Gigabit Ethernet\n\nesxcli network ip interface list\n\n> vmk0\n>    Name: vmk0\n>    MAC Address: e4:3d:1a:2c:68:f0\n>    Enabled: true\n>    Portset: vSwitch0\n>    Portgroup: Management Network\n>    Netstack Instance: defaultTcpipStack\n>    VDS Name: N/A\n>    VDS UUID: N/A\n>    VDS Port: N/A\n>    VDS Connection: -1\n>    Opaque Network ID: N/A\n>    Opaque Network Type: N/A\n>    External ID: N/A\n>    MTU: 1500\n>    TSO MSS: 65535\n>    RXDispQueue Size: 4\n>    Port ID: 67108873\n>\n> vmk1\n>    Name: vmk1\n>    MAC Address: 00:50:56:6a:b3:d7\n>    Enabled: true\n>    Portset: vSwitch1\n>    Portgroup: Business Network\n>    Netstack Instance: defaultTcpipStack\n>    VDS Name: N/A\n>    VDS UUID: N/A\n>    VDS Port: N/A\n>    VDS Connection: -1\n>    Opaque Network ID: N/A\n>    Opaque Network Type: N/A\n>    External ID: N/A\n>    MTU: 1500\n>    TSO MSS: 65535\n>    RXDispQueue Size: 4\n>    Port ID: 100663311\n\nesxcfg-vmknic -l\n\n> Interface  Port Group/DVPort/Opaque Network        IP Family IP Address                              Netmask         Broadcast       MAC Address       MTU     TSO MSS   Enabled Type                NetStack\n> vmk0       Management Network                      IPv4      N/A                                     N/A             N/A             e4:3d:1a:2c:68:f0 1500    65535     true    NONE                defaultTcpipStack\n> vmk0       Management Network                      IPv6      fe80::e63d:1aff:fe2c:68f0               64                              e4:3d:1a:2c:68:f0 1500    65535     true    STATIC, PREFERRED   defaultTcpipStack\n> vmk1       Business Network                        IPv4      172.28.30.182                           255.255.254.0   172.28.31.255   00:50:56:6a:b3:d7 1500    65535     true    DHCP                defaultTcpipStack\n> vmk1       Business Network                        IPv6      fe80::250:56ff:fe6a:b3d7                64                              00:50:56:6a:b3:d7 1500    65535     true    STATIC, PREFERRED   defaultTcpipStack\n\n",
+  "created_time": 1751336900208,
+  "updated_time": 1761191720020,
+  "author": "",
+  "parent_id": "ec8031c8fd314213b391d006589cd073",
+  "type_": 1
+}
+[2026-02-04T06:11:54.825Z] [DEBUG] [joplin-plugin-typora-like-editor] 记录笔记文件夹关联 {
+  "noteId": "f12633ab738b4e83b6dd05dd0a7c230c",
+  "folderId": "ec8031c8fd314213b391d006589cd073"
+}
+[2026-02-04T06:11:54.825Z] [INFO] [joplin-plugin-typora-like-editor] 无原有YAML，生成新前沿信息（同步Joplin元数据）
+[2026-02-04T06:11:54.825Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] processYamlFrontmatter 开始 {
+  "noteId": "f12633ab738b4e83b6dd05dd0a7c230c",
+  "noteTitle": "ESXi-支持日志"
+}
+[2026-02-04T06:11:54.825Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] processYamlFrontmatter 结束
+[2026-02-04T06:11:54.825Z] [INFO] [joplin-plugin-typora-like-editor] 笔记【ESXi-支持日志】处理完成，已加入全局缓存 {
+  "noteId": "f12633ab738b4e83b6dd05dd0a7c230c",
+  "fileName": "ESXi-支持日志.md"
+}
+[2026-02-04T06:11:54.826Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 1,
+  "itemId": "a5549d15f90c43a18885c6b2c8b28ef7",
+  "style": 1
+}
+[2026-02-04T06:11:54.825Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:11:54.827Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理笔记基础信息 {
+  "id": "a5549d15f90c43a18885c6b2c8b28ef7",
+  "title": "ESXi-端口组与网卡映射的作用"
+}
+[2026-02-04T06:11:54.828Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理笔记完整属性 {
+  "id": "a5549d15f90c43a18885c6b2c8b28ef7",
+  "title": "ESXi-端口组与网卡映射的作用",
+  "body": "端口组（Port Group）与物理网卡（如 vmnicX）的映射是 ESXi 虚拟网络架构的核心机制，其作用主要体现在以下几个方面：\r\n\r\n一、核心功能\r\n\r\n\r\n流量隔离与分类\r\n\r\n不同端口组承载不同网络流量类型：\r\n\r\nManagement Network：ESXi 管理流量（SSH、Web 访问）\r\nVM Network：虚拟机业务流量\r\nvMotion：虚拟机迁移专用流量\r\n\r\n\r\n物理隔离：通过绑定到不同物理网卡（如 vmnic0 用于管理，vmnic1 用于业务），避免流量互相干扰。\r\n\r\n\r\n\r\n物理网络资源扩展\r\n\r\n多网卡绑定：一个端口组可映射到多个物理网卡（如 vmnic0 + vmnic1），实现：\r\n\r\n负载均衡：流量分摊提升带宽\r\n故障切换：单网卡故障时自动切换到备用网卡\r\n\r\n\r\n\r\n\r\n\r\n安全策略精细化\r\n\r\nVLAN 隔离：在端口组级别设置 VLAN ID（如 VLAN 10），使同一物理网卡传输不同 VLAN 流量，实现网络逻辑隔离。\r\n流量策略：可在端口组配置安全策略（如 MAC 地址过滤、混杂模式开关）。\r\n\r\n\r\n\r\n\r\n二、实际应用场景\r\n场景 1：业务流量优化\r\n\r\n需求：虚拟机需高速访问外部网络\r\n方案：\r\n\r\n创建专用端口组 VM-Traffic → 绑定到高性能物理网卡 vmnic2\r\n虚拟机网络适配器选择 VM-Traffic\r\n\r\n\r\n效果：业务流量独占物理带宽，避免被管理流量挤占。\r\n\r\n场景 2：高可用架构\r\n\r\n需求：防止物理网卡故障导致业务中断\r\n方案：\r\n\r\n端口组 Critical-VMs → 绑定 vmnic3 + vmnic4\r\n启用 故障切换策略（故障时自动切至 vmnic4）\r\n\r\n\r\n效果：单网卡故障时业务无感知。\r\n\r\n三、技术原理\r\n```mermaid\r\ngraph TB\r\n    subgraph 物理层\r\n        vmnic0[物理网卡 1] --> vSwitch\r\n        vmnic1[物理网卡 2] --> vSwitch\r\n    end\r\n\r\n    subgraph 虚拟层\r\n        vSwitch[虚拟交换机] --> PortGroup1[端口组 VLAN10]\r\n        vSwitch --> PortGroup2[端口组 VLAN20]\r\n        \r\n        PortGroup1 --> vmk0[管理接口]\r\n        PortGroup1 --> VM1[虚拟机 1]\r\n        PortGroup2 --> VM2[虚拟机 2]\r\n    end\r\n\r\n```\r\n\r\n\r\n\r\n\r\n箭头方向：\r\n虚拟机 → 端口组 → 虚拟交换机 → 物理网卡 → 外部网络\r\n关键规则：\r\n端口组是策略执行点，物理网卡是资源提供者。\r\n\r\n\r\n四、运维价值\r\n\r\n\r\n\r\n功能\r\n直接作用\r\n用户收益\r\n\r\n\r\n\r\n\r\n流量分类\r\n分离管理/业务/存储流量\r\n避免拥塞，提升性能\r\n\r\n\r\n多网卡绑定\r\n聚合带宽 + 故障转移\r\n网络高可用，吞吐量倍增\r\n\r\n\r\nVLAN 支持\r\n单物理网卡传输多逻辑网络\r\n节省硬件成本，简化布线\r\n\r\n\r\n安全策略挂载点\r\n在端口组级设置防火墙规则\r\n精准控制虚拟机网络安全\r\n\r\n\r\n\r\n\r\n五、配置注意事项\r\n\r\n避免单点故障：关键端口组至少绑定 2 块物理网卡\r\n性能匹配：\r\n\r\n万兆业务流量 → 绑定万兆物理网卡\r\n千兆管理流量 → 绑定千兆物理网卡\r\n\r\nVLAN 一致性：\r\n端口组 VLAN ID 需与物理交换机 Trunk 端口配置匹配。\r\n\r\n\r\n💡 总结：端口组与物理网卡的映射，本质是 将虚拟网络逻辑（端口组）锚定到物理硬件资源（网卡），是虚拟化环境中实现灵活组网、资源优化和安全管控的基石。",
+  "created_time": 1751357043044,
+  "updated_time": 1751689214441,
+  "author": "",
+  "parent_id": "ec8031c8fd314213b391d006589cd073",
+  "type_": 1
+}
+[2026-02-04T06:11:54.828Z] [DEBUG] [joplin-plugin-typora-like-editor] 记录笔记文件夹关联 {
+  "noteId": "a5549d15f90c43a18885c6b2c8b28ef7",
+  "folderId": "ec8031c8fd314213b391d006589cd073"
+}
+[2026-02-04T06:11:54.828Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] processYamlFrontmatter 开始 {
+  "noteId": "a5549d15f90c43a18885c6b2c8b28ef7",
+  "noteTitle": "ESXi-端口组与网卡映射的作用"
+}
+[2026-02-04T06:11:54.828Z] [INFO] [joplin-plugin-typora-like-editor] 无原有YAML，生成新前沿信息（同步Joplin元数据）
+[2026-02-04T06:11:54.828Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] processYamlFrontmatter 结束
+[2026-02-04T06:11:54.828Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:11:54.828Z] [INFO] [joplin-plugin-typora-like-editor] 笔记【ESXi-端口组与网卡映射的作用】处理完成，已加入全局缓存 {
+  "noteId": "a5549d15f90c43a18885c6b2c8b28ef7",
+  "fileName": "ESXi-端口组与网卡映射的作用.md"
+}
+[2026-02-04T06:11:54.829Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onClose 开始 {
+  "destPath": "C:\\Users\\xxx\\Downloads\\04_02_2026.md",
+  "style": 1
+}
+[2026-02-04T06:11:54.829Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源链接替换：![esxi图形化管理1](:/ba1e1695704a44f9bed7344f38331442) -> ![esxi图形化管理1](./assets/esxi图形化管理1.png)
+[2026-02-04T06:11:54.829Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源链接替换：![esxi图形化管理-GPU直通](:/b4e81fc96a994d0e991104bc35682185) -> ![esxi图形化管理-GPU直通](./assets/esxi图形化管理-GPU直通.png)
+[2026-02-04T06:11:54.829Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] replaceResourceLinks 开始 {
+  "noteId": "15c88f27e2e549e6a51e2747d3b15903",
+  "resourceMapSize": 5
+}
+[2026-02-04T06:11:54.829Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源链接替换：![esxi-gpumanager](:/76d6eb45a39347699ca8534042185a96) -> ![esxi-gpumanager](./assets/esxi-gpumanager.png)
+[2026-02-04T06:11:54.829Z] [INFO] [joplin-plugin-typora-like-editor] 开始分别保存 5 个笔记
+[2026-02-04T06:11:54.830Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] replaceResourceLinks 结束 {
+  "替换数量": 4
+}
+[2026-02-04T06:11:54.829Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源链接替换：![ESXi主机与虚拟机互联](:/7fe70bf5565940fc935782a7c90f79f8) -> ![ESXi主机与虚拟机互联](./assets/ESXi主机与虚拟机互联.png)
+[2026-02-04T06:11:54.832Z] [INFO] [joplin-plugin-typora-like-editor] 笔记已保存：C:\Users\xxx\Downloads\Notes\科研工作\计算机与代码\esxi\ESXi-r740.md
+[2026-02-04T06:11:54.832Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] replaceResourceLinks 开始 {
+  "noteId": "a465bad8328a4295a29dd514f7173c22",
+  "resourceMapSize": 5
+}
+[2026-02-04T06:11:54.832Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] replaceResourceLinks 结束 {
+  "替换数量": 0
+}
+[2026-02-04T06:11:54.833Z] [INFO] [joplin-plugin-typora-like-editor] 笔记已保存：C:\Users\xxx\Downloads\Notes\科研工作\计算机与代码\esxi\ESXi-vSwitch的作用.md
+[2026-02-04T06:11:54.833Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] replaceResourceLinks 开始 {
+  "noteId": "24c8caba01544d8f9a7ec620f6dc9d27",
+  "resourceMapSize": 5
+}
+[2026-02-04T06:11:54.833Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] replaceResourceLinks 结束 {
+  "替换数量": 0
+}
+[2026-02-04T06:11:54.834Z] [INFO] [joplin-plugin-typora-like-editor] 笔记已保存：C:\Users\xxx\Downloads\Notes\科研工作\计算机与代码\esxi\ESXi-技术外援.md
+[2026-02-04T06:11:54.834Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] replaceResourceLinks 开始 {
+  "noteId": "f12633ab738b4e83b6dd05dd0a7c230c",
+  "resourceMapSize": 5
+}
+[2026-02-04T06:11:54.834Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源链接替换：![ESXi主机与虚拟机互联](:/0dccf72b8fbc4c1581a91b0e289ac49e) -> ![ESXi主机与虚拟机互联](./assets/ESXi主机与虚拟机互联.png)
+[2026-02-04T06:11:54.834Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] replaceResourceLinks 结束 {
+  "替换数量": 1
+}
+[2026-02-04T06:11:54.835Z] [INFO] [joplin-plugin-typora-like-editor] 笔记已保存：C:\Users\xxx\Downloads\Notes\科研工作\计算机与代码\esxi\ESXi-支持日志.md
+[2026-02-04T06:11:54.835Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] replaceResourceLinks 开始 {
+  "noteId": "a5549d15f90c43a18885c6b2c8b28ef7",
+  "resourceMapSize": 5
+}
+[2026-02-04T06:11:54.835Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] replaceResourceLinks 结束 {
+  "替换数量": 0
+}
+[2026-02-04T06:11:54.836Z] [INFO] [joplin-plugin-typora-like-editor] 笔记已保存：C:\Users\xxx\Downloads\Notes\科研工作\计算机与代码\esxi\ESXi-端口组与网卡映射的作用.md
+[2026-02-04T06:11:54.836Z] [INFO] [joplin-plugin-typora-like-editor] 导出成功！共保存 5 个笔记
+[2026-02-04T06:11:54.836Z] [INFO] [joplin-plugin-typora-like-editor] 资源总数：5 个
+[2026-02-04T06:11:54.836Z] [INFO] [joplin-plugin-typora-like-editor] 导出路径样式：1
+[2026-02-04T06:11:54.836Z] [INFO] [joplin-plugin-typora-like-editor] 保存合并内容：false
+[2026-02-04T06:11:54.836Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onClose 结束
+[2026-02-04T06:11:54.836Z] [DEBUG] [joplin-plugin-typora-like-editor] 全局缓存已重置
+[2026-02-04T06:12:27.213Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onInit 开始 {
+  "destPath": "C:\\Users\\xxx\\Downloads\\ESXi-r740.md"
+}
+[2026-02-04T06:12:27.216Z] [INFO] [joplin-plugin-typora-like-editor] 当前导出路径样式 {
+  "rawValue": 1,
+  "convertedValue": 1,
+  "styleName": "层次结构"
+}
+[2026-02-04T06:12:27.217Z] [INFO] [joplin-plugin-typora-like-editor] 层次结构模式：开始预加载所有文件夹信息
+[2026-02-04T06:12:27.217Z] [INFO] [joplin-plugin-typora-like-editor] 当前保存合并内容开关 {
+  "enabled": false
+}
+[2026-02-04T06:12:27.219Z] [INFO] [joplin-plugin-typora-like-editor] 文件夹预加载完成，共加载 26 个文件夹
+[2026-02-04T06:12:27.219Z] [INFO] [joplin-plugin-typora-like-editor] 导出初始化完成，全局缓存已清空
+[2026-02-04T06:12:27.219Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onInit 结束
+[2026-02-04T06:12:27.221Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 开始 {
+  "resourceId": "76d6eb45a39347699ca8534042185a96",
+  "filePath": "C:/Users/xxx/.config/joplin-desktop/resources/76d6eb45a39347699ca8534042185a96.png",
+  "style": 1
+}
+[2026-02-04T06:12:27.221Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理资源完整属性 {
+  "id": "76d6eb45a39347699ca8534042185a96"
+}
+[2026-02-04T06:12:27.222Z] [DEBUG] [joplin-plugin-typora-like-editor] 使用层次结构模式处理资源
+[2026-02-04T06:12:27.223Z] [INFO] [joplin-plugin-typora-like-editor] resourceNotes:  {
+  "items": [
+    {
+      "id": "15c88f27e2e549e6a51e2747d3b15903",
+      "parent_id": "ec8031c8fd314213b391d006589cd073",
+      "title": "ESXi-r740",
+      "deleted_time": 0
+    }
+  ],
+  "has_more": false
+}
+[2026-02-04T06:12:27.223Z] [DEBUG] [joplin-plugin-typora-like-editor] 层次结构资源路径计算 {
+  "noteId": "15c88f27e2e549e6a51e2747d3b15903",
+  "folderId": "ec8031c8fd314213b391d006589cd073",
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets",
+  "resFileName": "esxi-gpumanager.png",
+  "resDestPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\esxi-gpumanager.png",
+  "resRelativePath": "./assets/esxi-gpumanager.png"
+}
+[2026-02-04T06:12:27.225Z] [INFO] [joplin-plugin-typora-like-editor] 创建文件夹和assets目录 {
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets"
+}
+[2026-02-04T06:12:27.227Z] [INFO] [joplin-plugin-typora-like-editor] 资源复制完成 {
+  "from": "C:/Users/xxx/.config/joplin-desktop/resources/76d6eb45a39347699ca8534042185a96.png",
+  "to": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\esxi-gpumanager.png"
+}
+[2026-02-04T06:12:27.227Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源映射已记录 {
+  "resourceKey": "15c88f27e2e549e6a51e2747d3b15903_76d6eb45a39347699ca8534042185a96",
+  "relativePath": "./assets/esxi-gpumanager.png"
+}
+[2026-02-04T06:12:27.227Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 结束
+[2026-02-04T06:12:27.228Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 4,
+  "itemId": "76d6eb45a39347699ca8534042185a96",
+  "style": 1
+}
+[2026-02-04T06:12:27.228Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:12:27.230Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 开始 {
+  "resourceId": "7fe70bf5565940fc935782a7c90f79f8",
+  "filePath": "C:/Users/xxx/.config/joplin-desktop/resources/7fe70bf5565940fc935782a7c90f79f8.png",
+  "style": 1
+}
+[2026-02-04T06:12:27.230Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理资源完整属性 {
+  "id": "7fe70bf5565940fc935782a7c90f79f8"
+}
+[2026-02-04T06:12:27.231Z] [DEBUG] [joplin-plugin-typora-like-editor] 使用层次结构模式处理资源
+[2026-02-04T06:12:27.232Z] [INFO] [joplin-plugin-typora-like-editor] resourceNotes:  {
+  "items": [
+    {
+      "id": "15c88f27e2e549e6a51e2747d3b15903",
+      "parent_id": "ec8031c8fd314213b391d006589cd073",
+      "title": "ESXi-r740",
+      "deleted_time": 0
+    }
+  ],
+  "has_more": false
+}
+[2026-02-04T06:12:27.232Z] [DEBUG] [joplin-plugin-typora-like-editor] 层次结构资源路径计算 {
+  "noteId": "15c88f27e2e549e6a51e2747d3b15903",
+  "folderId": "ec8031c8fd314213b391d006589cd073",
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets",
+  "resFileName": "ESXi主机与虚拟机互联.png",
+  "resDestPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\ESXi主机与虚拟机互联.png",
+  "resRelativePath": "./assets/ESXi主机与虚拟机互联.png"
+}
+[2026-02-04T06:12:27.232Z] [INFO] [joplin-plugin-typora-like-editor] 创建文件夹和assets目录 {
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets"
+}
+[2026-02-04T06:12:27.233Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 结束
+[2026-02-04T06:12:27.233Z] [INFO] [joplin-plugin-typora-like-editor] 资源复制完成 {
+  "from": "C:/Users/xxx/.config/joplin-desktop/resources/7fe70bf5565940fc935782a7c90f79f8.png",
+  "to": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\ESXi主机与虚拟机互联.png"
+}
+[2026-02-04T06:12:27.233Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源映射已记录 {
+  "resourceKey": "15c88f27e2e549e6a51e2747d3b15903_7fe70bf5565940fc935782a7c90f79f8",
+  "relativePath": "./assets/ESXi主机与虚拟机互联.png"
+}
+[2026-02-04T06:12:27.235Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 4,
+  "itemId": "7fe70bf5565940fc935782a7c90f79f8",
+  "style": 1
+}
+[2026-02-04T06:12:27.235Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:12:27.237Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 开始 {
+  "resourceId": "b4e81fc96a994d0e991104bc35682185",
+  "filePath": "C:/Users/xxx/.config/joplin-desktop/resources/b4e81fc96a994d0e991104bc35682185.png",
+  "style": 1
+}
+[2026-02-04T06:12:27.237Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理资源完整属性 {
+  "id": "b4e81fc96a994d0e991104bc35682185"
+}
+[2026-02-04T06:12:27.241Z] [DEBUG] [joplin-plugin-typora-like-editor] 使用层次结构模式处理资源
+[2026-02-04T06:12:27.243Z] [INFO] [joplin-plugin-typora-like-editor] resourceNotes:  {
+  "items": [
+    {
+      "id": "15c88f27e2e549e6a51e2747d3b15903",
+      "parent_id": "ec8031c8fd314213b391d006589cd073",
+      "title": "ESXi-r740",
+      "deleted_time": 0
+    }
+  ],
+  "has_more": false
+}
+[2026-02-04T06:12:27.243Z] [DEBUG] [joplin-plugin-typora-like-editor] 层次结构资源路径计算 {
+  "noteId": "15c88f27e2e549e6a51e2747d3b15903",
+  "folderId": "ec8031c8fd314213b391d006589cd073",
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets",
+  "resFileName": "esxi图形化管理-GPU直通.png",
+  "resDestPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\esxi图形化管理-GPU直通.png",
+  "resRelativePath": "./assets/esxi图形化管理-GPU直通.png"
+}
+[2026-02-04T06:12:27.244Z] [INFO] [joplin-plugin-typora-like-editor] 创建文件夹和assets目录 {
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets"
+}
+[2026-02-04T06:12:27.245Z] [INFO] [joplin-plugin-typora-like-editor] 资源复制完成 {
+  "from": "C:/Users/xxx/.config/joplin-desktop/resources/b4e81fc96a994d0e991104bc35682185.png",
+  "to": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\esxi图形化管理-GPU直通.png"
+}
+[2026-02-04T06:12:27.245Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源映射已记录 {
+  "resourceKey": "15c88f27e2e549e6a51e2747d3b15903_b4e81fc96a994d0e991104bc35682185",
+  "relativePath": "./assets/esxi图形化管理-GPU直通.png"
+}
+[2026-02-04T06:12:27.245Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 结束
+[2026-02-04T06:12:27.246Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 4,
+  "itemId": "b4e81fc96a994d0e991104bc35682185",
+  "style": 1
+}
+[2026-02-04T06:12:27.246Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:12:27.247Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 开始 {
+  "resourceId": "ba1e1695704a44f9bed7344f38331442",
+  "filePath": "C:/Users/xxx/.config/joplin-desktop/resources/ba1e1695704a44f9bed7344f38331442.png",
+  "style": 1
+}
+[2026-02-04T06:12:27.247Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理资源完整属性 {
+  "id": "ba1e1695704a44f9bed7344f38331442"
+}
+[2026-02-04T06:12:27.248Z] [DEBUG] [joplin-plugin-typora-like-editor] 使用层次结构模式处理资源
+[2026-02-04T06:12:27.250Z] [INFO] [joplin-plugin-typora-like-editor] resourceNotes:  {
+  "items": [
+    {
+      "id": "15c88f27e2e549e6a51e2747d3b15903",
+      "parent_id": "ec8031c8fd314213b391d006589cd073",
+      "title": "ESXi-r740",
+      "deleted_time": 0
+    }
+  ],
+  "has_more": false
+}
+[2026-02-04T06:12:27.250Z] [DEBUG] [joplin-plugin-typora-like-editor] 层次结构资源路径计算 {
+  "noteId": "15c88f27e2e549e6a51e2747d3b15903",
+  "folderId": "ec8031c8fd314213b391d006589cd073",
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets",
+  "resFileName": "esxi图形化管理1.png",
+  "resDestPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\esxi图形化管理1.png",
+  "resRelativePath": "./assets/esxi图形化管理1.png"
+}
+[2026-02-04T06:12:27.250Z] [INFO] [joplin-plugin-typora-like-editor] 创建文件夹和assets目录 {
+  "folderPath": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi",
+  "assetsDir": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets"
+}
+[2026-02-04T06:12:27.251Z] [INFO] [joplin-plugin-typora-like-editor] 资源复制完成 {
+  "from": "C:/Users/xxx/.config/joplin-desktop/resources/ba1e1695704a44f9bed7344f38331442.png",
+  "to": "C:\\Users\\xxx\\Downloads\\Notes\\科研工作\\计算机与代码\\esxi\\assets\\esxi图形化管理1.png"
+}
+[2026-02-04T06:12:27.251Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源映射已记录 {
+  "resourceKey": "15c88f27e2e549e6a51e2747d3b15903_ba1e1695704a44f9bed7344f38331442",
+  "relativePath": "./assets/esxi图形化管理1.png"
+}
+[2026-02-04T06:12:27.251Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessResource 结束
+[2026-02-04T06:12:27.253Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 4,
+  "itemId": "ba1e1695704a44f9bed7344f38331442",
+  "style": 1
+}
+[2026-02-04T06:12:27.253Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:12:27.255Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 开始 {
+  "itemType": 1,
+  "itemId": "15c88f27e2e549e6a51e2747d3b15903",
+  "style": 1
+}
+[2026-02-04T06:12:27.255Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理笔记基础信息 {
+  "id": "15c88f27e2e549e6a51e2747d3b15903",
+  "title": "ESXi-r740"
+}
+[2026-02-04T06:12:27.256Z] [DEBUG] [joplin-plugin-typora-like-editor] 当前处理笔记完整属性 {
+  "id": "15c88f27e2e549e6a51e2747d3b15903",
+  "title": "ESXi-r740",
+  "body": "![esxi图形化管理1](:/ba1e1695704a44f9bed7344f38331442)\n\n![esxi-gpumanager](:/76d6eb45a39347699ca8534042185a96)\n\n![ESXi主机与虚拟机互联](:/7fe70bf5565940fc935782a7c90f79f8)\n\n![esxi图形化管理-GPU直通](:/b4e81fc96a994d0e991104bc35682185)\n\n\n\n",
+  "created_time": 1761190403797,
+  "updated_time": 1761190828375,
+  "author": "",
+  "parent_id": "ec8031c8fd314213b391d006589cd073",
+  "type_": 1
+}
+[2026-02-04T06:12:27.256Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] processYamlFrontmatter 开始 {
+  "noteId": "15c88f27e2e549e6a51e2747d3b15903",
+  "noteTitle": "ESXi-r740"
+}
+[2026-02-04T06:12:27.256Z] [DEBUG] [joplin-plugin-typora-like-editor] 记录笔记文件夹关联 {
+  "noteId": "15c88f27e2e549e6a51e2747d3b15903",
+  "folderId": "ec8031c8fd314213b391d006589cd073"
+}
+[2026-02-04T06:12:27.256Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] processYamlFrontmatter 结束
+[2026-02-04T06:12:27.256Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onProcessItem 结束
+[2026-02-04T06:12:27.256Z] [INFO] [joplin-plugin-typora-like-editor] 无原有YAML，生成新前沿信息（同步Joplin元数据）
+[2026-02-04T06:12:27.257Z] [INFO] [joplin-plugin-typora-like-editor] 开始分别保存 1 个笔记
+[2026-02-04T06:12:27.256Z] [INFO] [joplin-plugin-typora-like-editor] 笔记【ESXi-r740】处理完成，已加入全局缓存 {
+  "noteId": "15c88f27e2e549e6a51e2747d3b15903",
+  "fileName": "ESXi-r740.md"
+}
+[2026-02-04T06:12:27.257Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源链接替换：![esxi图形化管理1](:/ba1e1695704a44f9bed7344f38331442) -> ![esxi图形化管理1](./assets/esxi图形化管理1.png)
+[2026-02-04T06:12:27.257Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onClose 开始 {
+  "destPath": "C:\\Users\\xxx\\Downloads\\ESXi-r740.md",
+  "style": 1
+}
+[2026-02-04T06:12:27.257Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] replaceResourceLinks 开始 {
+  "noteId": "15c88f27e2e549e6a51e2747d3b15903",
+  "resourceMapSize": 4
+}
+[2026-02-04T06:12:27.257Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源链接替换：![esxi-gpumanager](:/76d6eb45a39347699ca8534042185a96) -> ![esxi-gpumanager](./assets/esxi-gpumanager.png)
+[2026-02-04T06:12:27.258Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源链接替换：![ESXi主机与虚拟机互联](:/7fe70bf5565940fc935782a7c90f79f8) -> ![ESXi主机与虚拟机互联](./assets/ESXi主机与虚拟机互联.png)
+[2026-02-04T06:12:27.258Z] [DEBUG] [joplin-plugin-typora-like-editor] 资源链接替换：![esxi图形化管理-GPU直通](:/b4e81fc96a994d0e991104bc35682185) -> ![esxi图形化管理-GPU直通](./assets/esxi图形化管理-GPU直通.png)
+[2026-02-04T06:12:27.258Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] replaceResourceLinks 结束 {
+  "替换数量": 4
+}
+[2026-02-04T06:12:27.260Z] [INFO] [joplin-plugin-typora-like-editor] 笔记已保存：C:\Users\xxx\Downloads\Notes\科研工作\计算机与代码\esxi\ESXi-r740.md
+[2026-02-04T06:12:27.260Z] [INFO] [joplin-plugin-typora-like-editor] 导出成功！共保存 1 个笔记
+[2026-02-04T06:12:27.260Z] [INFO] [joplin-plugin-typora-like-editor] 导出路径样式：1
+[2026-02-04T06:12:27.260Z] [INFO] [joplin-plugin-typora-like-editor] 资源总数：4 个
+[2026-02-04T06:12:27.260Z] [INFO] [joplin-plugin-typora-like-editor] 保存合并内容：false
+[2026-02-04T06:12:27.260Z] [DEBUG] [joplin-plugin-typora-like-editor] [函数调用] onClose 结束
+[2026-02-04T06:12:27.260Z] [DEBUG] [joplin-plugin-typora-like-editor] 全局缓存已重置
