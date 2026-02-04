@@ -56,6 +56,14 @@ export const SETTINGS_KEYS = {
    * 默认用户名
    */
   DEFAULT_AUTHOR: "defaultAuthor",
+  /**
+   * 外部编辑器路径
+   */
+  EXTERNAL_EDITOR_PATH: "externalEditorPath",
+  /**
+   * 临时目录路径
+   */
+  TEMP_DIR_PATH: "tempDirPath",
 } as const;
 
 /**
@@ -127,6 +135,24 @@ export async function registerSettings(): Promise<void> {
         public: true,
         section: SETTINGS_SECTION,
         advanced: false,
+      },
+      [SETTINGS_KEYS.EXTERNAL_EDITOR_PATH]: {
+        type: SettingItemType.String,
+        value: "Typora",
+        label: "外部编辑器",
+        description: "指定用于打开笔记的外部编辑器（如 Typora、code、obsidian）。在 Windows/macOS 上可以使用应用名称，在 Linux 上需要完整路径",
+        public: true,
+        section: SETTINGS_SECTION,
+        advanced: false,
+      },
+      [SETTINGS_KEYS.TEMP_DIR_PATH]: {
+        type: SettingItemType.String,
+        value: "",
+        label: "临时目录",
+        description: "指定临时导出文件的目录，留空则使用插件数据目录",
+        public: true,
+        section: SETTINGS_SECTION,
+        advanced: true,
       },
     };
 
@@ -232,6 +258,12 @@ export function validateSettingValue(key: string, value: unknown): boolean {
   if (key === SETTINGS_KEYS.DEFAULT_AUTHOR) {
     return typeof value === "string";
   }
+  if (key === SETTINGS_KEYS.EXTERNAL_EDITOR_PATH) {
+    return typeof value === "string";
+  }
+  if (key === SETTINGS_KEYS.TEMP_DIR_PATH) {
+    return typeof value === "string";
+  }
   return false;
 }
 
@@ -251,6 +283,12 @@ export function getSettingDefaultValue(key: string): unknown {
   if (key === SETTINGS_KEYS.DEFAULT_AUTHOR) {
     return "Unknown Author";
   }
+  if (key === SETTINGS_KEYS.EXTERNAL_EDITOR_PATH) {
+    return "Typora";
+  }
+  if (key === SETTINGS_KEYS.TEMP_DIR_PATH) {
+    return "";
+  }
   return null;
 }
 
@@ -268,4 +306,24 @@ export async function resetAllSettings(): Promise<void> {
   }
 
   logger.info("所有设置已重置");
+}
+
+/**
+ * 获取外部编辑器路径设置值
+ *
+ * @returns 当前设置的外部编辑器路径
+ */
+export async function getExternalEditorPath(): Promise<string> {
+  const value = await joplin.settings.value(SETTINGS_KEYS.EXTERNAL_EDITOR_PATH);
+  return value as string || "Typora";
+}
+
+/**
+ * 获取临时目录路径设置值
+ *
+ * @returns 当前设置的临时目录路径，如果为空则返回 null
+ */
+export async function getTempDirPath(): Promise<string | null> {
+  const value = await joplin.settings.value(SETTINGS_KEYS.TEMP_DIR_PATH);
+  return value as string || null;
 }

@@ -30,6 +30,7 @@ export interface ExportGlobalCache {
   resourceMap: Map<string, string>;
   folderMap: Map<string, any>;
   noteFolderMap: Map<string, string>;
+  usingHashName?: boolean;
 }
 
 // 创建全局缓存实例
@@ -41,6 +42,7 @@ export const createExportCache = (): ExportGlobalCache => ({
   resourceMap: new Map(),
   folderMap: new Map(),
   noteFolderMap: new Map(),
+  usingHashName: false,
 });
 
 // 处理YAML前沿：生成/替换核心字段，保留自定义字段
@@ -189,10 +191,15 @@ export const buildFolderPath = (folderId: string, destDir: string, folderMap: Ma
 };
 
 // 初始化导出缓存
-export const initExportCache = async (exportPathStyle: ExportPathStyle, saveMergedContent: boolean): Promise<ExportGlobalCache> => {
+export const initExportCache = async (
+  exportPathStyle: ExportPathStyle,
+  saveMergedContent: boolean,
+  usingHashName: boolean = false
+): Promise<ExportGlobalCache> => {
   const cache = createExportCache();
   cache.exportPathStyle = exportPathStyle;
   cache.saveMergedContent = saveMergedContent;
+  cache.usingHashName = usingHashName;
 
   // 层次结构模式：预加载所有文件夹信息
   if (exportPathStyle === ExportPathStyle.Hierarchical) {
@@ -399,19 +406,22 @@ export const finalizeExport = async (cache: ExportGlobalCache, destPath: string)
       let noteFilePath: string;
       let assetsDir: string;
 
+      // 确定文件名
+      const fileName = cache.usingHashName ? `edit-${noteId}.md` : noteInfo.fileName;
+
       if (cache.exportPathStyle === ExportPathStyle.Flat) {
         // 扁平结构：所有笔记在同一目录
-        noteFilePath = path.join(destDir, noteInfo.fileName);
+        noteFilePath = path.join(destDir, fileName);
         assetsDir = path.join(destDir, "assets");
       } else {
         // 层次结构：笔记按文件夹组织
         if (noteInfo.folderId) {
           const folderPath = buildFolderPath(noteInfo.folderId, destDir, cache.folderMap);
-          noteFilePath = path.join(folderPath, noteInfo.fileName);
+          noteFilePath = path.join(folderPath, fileName);
           assetsDir = path.join(folderPath, "assets");
         } else {
           // 无文件夹的笔记放在根目录
-          noteFilePath = path.join(destDir, noteInfo.fileName);
+          noteFilePath = path.join(destDir, fileName);
           assetsDir = path.join(destDir, "assets");
         }
       }
@@ -448,4 +458,157 @@ export const finalizeExport = async (cache: ExportGlobalCache, destPath: string)
   }
 
   logger.logFunctionEnd("finalizeExport");
+};
+
+/**
+ * 导出单个笔记到指定路径
+ *
+ * @param noteId 笔记 ID
+ * @param destPath 目标文件路径
+ * @param exportPathStyle 导出路径样式（此参数已忽略，函数强制使用扁平结构）
+ * @param usingHashName 是否使用哈希文件名格式（edit-noteId.md）
+ * @returns Promise<void>
+ */
+export const exportNoteToPath = async (
+  noteId: string,
+  destPath: string,
+  exportPathStyle: ExportPathStyle,
+  usingHashName: boolean = false
+): Promise<void> => {
+  // 强制使用扁平结构导出模式，忽略 exportPathStyle 参数
+  const forcedExportPathStyle = ExportPathStyle.Flat;
+  logger.logFunctionStart("exportNoteToPath", { noteId, destPath, exportPathStyle, forcedExportPathStyle, usingHashName });
+
+  try {
+    // 初始化缓存（强制使用扁平结构）
+    const cache = await initExportCache(forcedExportPathStyle, false, usingHashName);
+
+    // 获取笔记完整信息
+    const note = await joplin.data.get(["notes", noteId], {
+      fields: ["id", "title", "body", "created_time", "updated_time", "author", "parent_id"],
+    });
+
+    logger.debug("获取笔记信息成功", { noteId, title: note.title });
+
+    // 处理笔记项
+    await processNoteItem(note, cache);
+
+    // 获取笔记的资源列表
+    const resources = await joplin.data.get(["notes", noteId, "resources"], {
+      fields: ["id", "title"],
+      order_by: "title",
+      order_dir: "ASC",
+    });
+
+    logger.info(`找到 ${resources.items.length} 个资源`);
+
+    // 处理每个资源
+    for (const resource of resources.items) {
+      try {
+        // 获取资源的文件路径
+        const resourcePath = await joplin.data.resourcePath(resource.id);
+
+        // 处理资源项
+        await processResourceItem(resource, resourcePath, cache, destPath);
+      } catch (error) {
+        logger.logError(error, `处理资源失败: ${resource.id}`);
+      }
+    }
+
+    // 完成导出
+    await finalizeExport(cache, destPath);
+
+    logger.info(`单个笔记导出成功: ${note.title}`);
+  } catch (error) {
+    logger.logError(error, "导出单个笔记失败");
+    throw error;
+  }
+
+  logger.logFunctionEnd("exportNoteToPath");
+};
+
+/**
+ * 导出多个笔记到指定目录
+ *
+ * @param noteIds 笔记 ID 数组
+ * @param destDir 目标目录路径
+ * @param exportPathStyle 导出路径样式
+ * @returns Promise<void>
+ */
+export const exportNotesToDir = async (
+  noteIds: string[],
+  destDir: string,
+  exportPathStyle: ExportPathStyle
+): Promise<void> => {
+  logger.logFunctionStart("exportNotesToDir", { noteCount: noteIds.length, destDir, exportPathStyle });
+
+  try {
+    // 初始化缓存
+    const cache = await initExportCache(exportPathStyle, false);
+
+    // 处理每个笔记
+    for (const noteId of noteIds) {
+      try {
+        // 获取笔记完整信息
+        const note = await joplin.data.get(["notes", noteId], {
+          fields: ["id", "title", "body", "created_time", "updated_time", "author", "parent_id"],
+        });
+
+        logger.debug("处理笔记", { noteId, title: note.title });
+
+        // 层次结构模式：记录笔记与文件夹的关联
+        if (exportPathStyle === ExportPathStyle.Hierarchical && note.parent_id) {
+          cache.noteFolderMap.set(note.id, note.parent_id);
+        }
+
+        // 处理笔记项
+        await processNoteItem(note, cache);
+      } catch (error) {
+        logger.logError(error, `处理笔记失败: ${noteId}`);
+      }
+    }
+
+    // 获取所有涉及的资源
+    const allResources = new Set<string>();
+    for (const noteId of noteIds) {
+      try {
+        const resources = await joplin.data.get(["notes", noteId, "resources"], {
+          fields: ["id", "title"],
+        });
+        for (const resource of resources.items) {
+          allResources.add(resource.id);
+        }
+      } catch (error) {
+        logger.logError(error, `获取笔记资源失败: ${noteId}`);
+      }
+    }
+
+    logger.info(`找到 ${allResources.size} 个唯一资源`);
+
+    // 处理每个资源
+    for (const resourceId of allResources) {
+      try {
+        const resource = await joplin.data.get(["resources", resourceId], {
+          fields: ["id", "title", "file_extension"],
+        });
+
+        const resourcePath = await joplin.data.resourcePath(resourceId);
+
+        // 处理资源项
+        await processResourceItem(resource, resourcePath, cache, destDir);
+      } catch (error) {
+        logger.logError(error, `处理资源失败: ${resourceId}`);
+      }
+    }
+
+    // 完成导出
+    await finalizeExport(cache, destDir);
+
+    logger.info(`批量导出成功: ${noteIds.length} 个笔记`);
+  } catch (error) {
+    logger.logError(error, "批量导出失败");
+    throw error;
+  }
+
+  logger.logFunctionEnd("exportNotesToDir");
 };

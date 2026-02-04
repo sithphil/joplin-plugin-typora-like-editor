@@ -10,6 +10,7 @@ import {
   type ExportGlobalCache
 } from "./exporter";
 import { importMarkdown, type ImportResult } from "./importer";
+import { registerToolbarButton, cleanupAllEditingSessions } from "./toolbarButton";
 
 // 创建日志记录器实例
 const logger = getLogger("joplin-plugin-typora-like-editor", {
@@ -26,6 +27,11 @@ joplin.plugins.register({
     // 初始化日志系统
     await logger.initialize();
     logger.info("Typora-like Editor Plugin started!");
+
+    // 清理上一次遗留的临时文件
+    // 注意：由于 Joplin 插件 API 没有可靠的应用关闭事件，
+    // 临时文件会在每次插件启动时清理
+    await cleanupAllEditingSessions();
 
     // 输出日志文件路径
     const logFilePath = logger.getLogFilePath();
@@ -178,5 +184,10 @@ joplin.plugins.register({
         });
       },
     });
+
+    // 注册工具栏按钮
+    await registerToolbarButton();
+    logger.info("工具栏按钮已注册");
+
   },
 });
