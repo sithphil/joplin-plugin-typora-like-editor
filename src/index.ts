@@ -28,9 +28,7 @@ joplin.plugins.register({
     await logger.initialize();
     logger.info("Typora-like Editor Plugin started!");
 
-    // 清理上一次遗留的临时文件
-    // 注意：由于 Joplin 插件 API 没有可靠的应用关闭事件，
-    // 临时文件会在每次插件启动时清理
+    // 无用且暂时不考虑这行代码：临时文件会在每次插件启动时清理
     await cleanupAllEditingSessions();
 
     // 输出日志文件路径

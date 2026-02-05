@@ -55,7 +55,7 @@ export const processYamlFrontmatter = (noteBody: string, note: any): string => {
   const coreKeys = ["title", "author", "created", "updated"];
   const coreMetadata = {
     title: note.title || "未命名笔记",
-    author: note.author || getDefaultAuthor(),
+    author: getDefaultAuthor() || note.author,
     created: new Date(note.created_time).toISOString(),
     updated: new Date(note.updated_time).toISOString(),
   };
@@ -138,8 +138,8 @@ export const replaceResourceLinks = (content: string, noteId: string, resourceMa
     // 优先使用笔记特定的资源映射，否则使用全局映射
     const resourceKey = `${noteId}_${resId}`;
     const localPath = resourceMap.get(resourceKey) ||
-                      resourceMap.get(resId) ||
-                      match;
+      resourceMap.get(resId) ||
+      match;
     logger.debug(`资源链接替换：${match} -> ![${alt}](${localPath})`);
     return `![${alt}](${localPath})`;
   });
@@ -360,13 +360,12 @@ export const processResourceItem = async (resource: any, filePath: string, cache
         });
 
         // 创建文件夹和assets目录（若不存在）
-        await fs.ensureDir(assetsDir);
-        logger.info("创建文件夹和assets目录", { folderPath, assetsDir });
+      await fs.ensureDir(assetsDir);
+      logger.info("创建文件夹和assets目录", { folderPath, assetsDir });
 
-        // 复制Joplin内部资源到assets目录
-        await fs.copyFile(filePath, resDestPath);
-        logger.info(`资源复制完成`, { from: filePath, to: resDestPath });
-
+      // 复制Joplin内部资源到assets目录
+      await fs.copyFile(filePath, resDestPath);
+      logger.info(`资源复制完成`, { from: filePath, to: resDestPath });
         // 记录资源映射（使用笔记ID作为键的一部分，避免冲突）
         const resourceKey = `${noteId}_${resDetail.id}`;
         cache.resourceMap.set(resourceKey, resRelativePath);
@@ -428,6 +427,12 @@ export const finalizeExport = async (cache: ExportGlobalCache, destPath: string)
 
       // 确保目录存在
       await fs.ensureDir(path.dirname(noteFilePath));
+
+      // 检测文件是否存在，如果存在则先删除
+      if (await fs.pathExists(noteFilePath)) {
+        logger.info(`文件已存在，先删除：${noteFilePath}`);
+        await fs.remove(noteFilePath);
+      }
 
       // 写入笔记文件
       await fs.writeFile(noteFilePath, processedContent, "utf8");

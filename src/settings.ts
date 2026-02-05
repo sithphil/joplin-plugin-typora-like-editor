@@ -64,6 +64,14 @@ export const SETTINGS_KEYS = {
    * 临时目录路径
    */
   TEMP_DIR_PATH: "tempDirPath",
+  /**
+   * 自动同步开关
+   */
+  AUTO_SYNC: "autoSync",
+  /**
+   * 同步间隔（毫秒）
+   */
+  SYNC_INTERVAL: "syncInterval",
 } as const;
 
 /**
@@ -154,6 +162,24 @@ export async function registerSettings(): Promise<void> {
         section: SETTINGS_SECTION,
         advanced: true,
       },
+      [SETTINGS_KEYS.AUTO_SYNC]: {
+        type: SettingItemType.Bool,
+        value: true,
+        label: "自动同步",
+        description: "检测到文件修改时自动同步回 Joplin。禁用后会在检测到修改时提示用户选择是否同步",
+        public: true,
+        section: SETTINGS_SECTION,
+        advanced: false,
+      },
+      [SETTINGS_KEYS.SYNC_INTERVAL]: {
+        type: SettingItemType.Int,
+        value: 5000,
+        label: "同步间隔（毫秒）",
+        description: "文件变化后等待的时间，用于防抖（避免频繁触发同步）",
+        public: true,
+        section: SETTINGS_SECTION,
+        advanced: true,
+      },
     };
 
     // 注册设置项
@@ -163,6 +189,15 @@ export async function registerSettings(): Promise<void> {
       exportPathStyleOptions: {
         [ExportPathStyle.Flat]: exportPathStyleLabels[ExportPathStyle.Flat],
         [ExportPathStyle.Hierarchical]: exportPathStyleLabels[ExportPathStyle.Hierarchical],
+      },
+      settingsConfig: {
+        [SETTINGS_KEYS.EXPORT_PATH_STYLE]: settingsConfig[SETTINGS_KEYS.EXPORT_PATH_STYLE].value,
+        [SETTINGS_KEYS.SAVE_MERGED_CONTENT]: settingsConfig[SETTINGS_KEYS.SAVE_MERGED_CONTENT].value,
+        [SETTINGS_KEYS.DEFAULT_AUTHOR]: settingsConfig[SETTINGS_KEYS.DEFAULT_AUTHOR].value,
+        [SETTINGS_KEYS.EXTERNAL_EDITOR_PATH]: settingsConfig[SETTINGS_KEYS.EXTERNAL_EDITOR_PATH].value,
+        [SETTINGS_KEYS.TEMP_DIR_PATH]: settingsConfig[SETTINGS_KEYS.TEMP_DIR_PATH].value,
+        [SETTINGS_KEYS.AUTO_SYNC]: settingsConfig[SETTINGS_KEYS.AUTO_SYNC].value,
+        [SETTINGS_KEYS.SYNC_INTERVAL]: settingsConfig[SETTINGS_KEYS.SYNC_INTERVAL].value,
       },
     });
   } catch (error) {
@@ -218,7 +253,7 @@ export async function setSaveMergedContent(enabled: boolean): Promise<void> {
  */
 export async function getDefaultAuthor(): Promise<string> {
   const value = await joplin.settings.value(SETTINGS_KEYS.DEFAULT_AUTHOR);
-  return value as string || "Unknown Author";
+  return value as string;
 }
 
 /**
@@ -264,6 +299,12 @@ export function validateSettingValue(key: string, value: unknown): boolean {
   if (key === SETTINGS_KEYS.TEMP_DIR_PATH) {
     return typeof value === "string";
   }
+  if (key === SETTINGS_KEYS.AUTO_SYNC) {
+    return typeof value === "boolean";
+  }
+  if (key === SETTINGS_KEYS.SYNC_INTERVAL) {
+    return typeof value === "number" && value > 0;
+  }
   return false;
 }
 
@@ -288,6 +329,12 @@ export function getSettingDefaultValue(key: string): unknown {
   }
   if (key === SETTINGS_KEYS.TEMP_DIR_PATH) {
     return "";
+  }
+  if (key === SETTINGS_KEYS.AUTO_SYNC) {
+    return true;
+  }
+  if (key === SETTINGS_KEYS.SYNC_INTERVAL) {
+    return 5000;
   }
   return null;
 }

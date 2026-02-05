@@ -3,6 +3,7 @@ import * as path from "path";
 import * as fs from "fs";
 import { getLogger, LogLevel } from "./logger";
 import { parseMarkdownImages } from "./tools";
+import { getDefaultAuthor } from "./settings";
 
 // 创建日志记录器实例
 const logger = getLogger("importer", {
@@ -258,4 +259,113 @@ const getFileNameWithoutExtension = (filePath: string): string => {
 // 转义正则表达式特殊字符
 const escapeRegExp = (string: string): string => {
   return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+};
+
+/**
+ * 更新现有笔记的内容（用于外部编辑器同步）
+ *
+ * 这个函数将修改后的 Markdown 内容导入并更新到现有笔记中。
+ * 它会：
+ * 1. 导入新的图片资源
+ * 2. 替换图片引用为 Joplin 内部格式
+ * 3. 更新笔记正文内容
+ *
+ * @param markdownContent 修改后的 Markdown 内容
+ * @param sourceFilePath 源文件路径（用于解析相对路径）
+ * @param noteId 要更新的笔记 ID
+ * @returns Promise<ImportResult> 导入结果
+ */
+export const updateNoteFromMarkdown = async (
+  markdownContent: string,
+  sourceFilePath: string | null,
+  noteId: string
+): Promise<ImportResult> => {
+  logger.logFunctionStart("updateNoteFromMarkdown", {
+    contentLength: markdownContent.length,
+    sourceFilePath,
+    noteId
+  });
+
+  const result: ImportResult = {
+    success: false,
+    errors: [],
+    importedResources: 0
+  };
+
+  try {
+    // 获取原始笔记信息
+    const originalNote = await joplin.data.get(["notes", noteId], {
+      fields: ["id", "title", "author", "body", "parent_id"],
+    });
+
+    logger.info("获取原始笔记信息成功", {
+      noteId: originalNote.id,
+      title: originalNote.title,
+      author: originalNote.author,
+      folderId: originalNote.parent_id
+    });
+
+    // 1. 查找所有本地图片引用
+    const localImages = findLocalImages(markdownContent, sourceFilePath);
+    logger.info(`找到 ${localImages.length} 个本地图片引用`);
+
+    // 2. 导入本地图片到 Joplin 资源库
+    const resourceMap = new Map<string, string>(); // 原路径 -> 资源ID映射
+    for (const image of localImages) {
+      try {
+        const resourceId = await importImageResource(image.filePath);
+        if (resourceId) {
+          resourceMap.set(image.originalPath, resourceId);
+          result.importedResources++;
+          logger.info(`图片导入成功: ${image.filePath} -> ${resourceId}`);
+        } else {
+          result.errors.push(`图片导入失败: ${image.filePath} (行 ${image.lineNumber})`);
+        }
+      } catch (error) {
+        result.errors.push(`图片导入异常: ${image.filePath} - ${error}`);
+        logger.logError(error, `导入图片失败: ${image.filePath}`);
+      }
+    }
+
+    // 3. 替换图片引用为 Joplin 内部格式
+    let processedContent = markdownContent;
+    for (const [originalPath, resourceId] of resourceMap.entries()) {
+      // 查找原始 alt 文本
+      const imageInfo = localImages.find(img => img.originalPath === originalPath);
+      const alt = imageInfo?.alt || "导入图片";
+
+      // 替换图片引用: ![alt](原路径) -> ![alt](:/资源ID)
+      const oldPattern = `!\\[([^\\]]*)\\]\\(${escapeRegExp(originalPath)}\\)`;
+      const newPattern = `![${alt}](:/${resourceId})`;
+
+      const regex = new RegExp(oldPattern, 'g');
+      processedContent = processedContent.replace(regex, newPattern);
+
+      logger.debug(`替换图片引用: ${originalPath} -> :/${resourceId}`);
+    }
+
+    // 4. 更新现有笔记的内容
+    const newAuthor = originalNote.author ? originalNote.author : getDefaultAuthor()
+    await joplin.data.put(["notes", noteId], null, {
+      author: newAuthor,
+      body: processedContent,
+    });
+
+    result.success = true;
+    result.noteId = noteId;
+    logger.info(`笔记更新成功: ${noteId}`);
+
+  } catch (error) {
+    result.errors.push(`更新笔记失败: ${error}`);
+    logger.logError(error, "更新笔记失败");
+  }
+
+  logger.logFunctionEnd("updateNoteFromMarkdown", {
+    success: result.success,
+    noteId: result.noteId,
+    errors: result.errors.length,
+    importedResources: result.importedResources
+  });
+
+  return result;
 };
