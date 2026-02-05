@@ -53,9 +53,10 @@ export const processYamlFrontmatter = (noteBody: string, note: any): string => {
   const yamlRegex = /^---\s*[\s\S]*?\s*---\s*/;
   // 核心元数据（同步Joplin内部元数据，固定补全顺序）
   const coreKeys = ["title", "author", "created", "updated"];
+
   const coreMetadata = {
     title: note.title || "未命名笔记",
-    author: getDefaultAuthor() || note.author,
+    author: note.author || "Unknown",
     created: new Date(note.created_time).toISOString(),
     updated: new Date(note.updated_time).toISOString(),
   };
@@ -132,19 +133,36 @@ export const replaceResourceLinks = (content: string, noteId: string, resourceMa
     return content;
   }
 
-  // 匹配Joplin内部资源链接格式：![alt](:/资源ID)
-  const resourceRegex = /!\[(.*?)\]\(:\/([a-f0-9]+)\)/g;
-  const processedContent = content.replace(resourceRegex, (match, alt, resId) => {
+  // 1. 替换 Markdown 格式的资源链接：![alt](:/资源ID)
+  const markdownResourceRegex = /!\[(.*?)\]\(:\/([a-f0-9]+)\)/g;
+  let processedContent = content.replace(markdownResourceRegex, (match, alt, resId) => {
     // 优先使用笔记特定的资源映射，否则使用全局映射
     const resourceKey = `${noteId}_${resId}`;
     const localPath = resourceMap.get(resourceKey) ||
       resourceMap.get(resId) ||
       match;
-    logger.debug(`资源链接替换：${match} -> ![${alt}](${localPath})`);
+    logger.debug(`Markdown 资源链接替换：${match} -> ![${alt}](${localPath})`);
     return `![${alt}](${localPath})`;
   });
 
-  logger.logFunctionEnd("replaceResourceLinks", { 替换数量: (content.match(resourceRegex) || []).length });
+  // 2. 替换 HTML 格式的资源链接：<img src=":/资源ID" ...>
+  const htmlResourceRegex = /<img\s+([^>]*?)src=["']:\/([a-f0-9]+)["']([^>]*?)\s*\/?>/gi;
+  processedContent = processedContent.replace(htmlResourceRegex, (match, before, resId, after) => {
+    // 优先使用笔记特定的资源映射，否则使用全局映射
+    const resourceKey = `${noteId}_${resId}`;
+    const localPath = resourceMap.get(resourceKey) ||
+      resourceMap.get(resId) ||
+      `:/${resId}`;
+
+    const newTag = `<img ${before}src="${localPath}"${after} />`;
+    logger.debug(`HTML 资源链接替换：${match.substring(0, 50)}... -> ${newTag.substring(0, 50)}...`);
+    return newTag;
+  });
+
+  logger.logFunctionEnd("replaceResourceLinks", {
+    markdown替换数量: (content.match(markdownResourceRegex) || []).length,
+    html替换数量: (content.match(htmlResourceRegex) || []).length
+  });
   return processedContent;
 };
 

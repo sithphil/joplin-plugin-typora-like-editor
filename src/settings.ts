@@ -253,7 +253,7 @@ export async function setSaveMergedContent(enabled: boolean): Promise<void> {
  */
 export async function getDefaultAuthor(): Promise<string> {
   const value = await joplin.settings.value(SETTINGS_KEYS.DEFAULT_AUTHOR);
-  return value as string;
+  return value as string || "Unknown";
 }
 
 /**
